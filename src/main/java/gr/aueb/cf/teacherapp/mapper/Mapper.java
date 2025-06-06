@@ -1,8 +1,11 @@
 package gr.aueb.cf.teacherapp.mapper;
 
+import gr.aueb.cf.teacherapp.core.enums.Role;
 import gr.aueb.cf.teacherapp.dto.TeacherInsertDTO;
 import gr.aueb.cf.teacherapp.dto.TeacherReadOnlyDTO;
+import gr.aueb.cf.teacherapp.dto.UserInsertDTO;
 import gr.aueb.cf.teacherapp.model.TeacherEntity;
+import gr.aueb.cf.teacherapp.model.UserEntity;
 import org.springframework.stereotype.Component;
 
 @Component
@@ -21,5 +24,10 @@ public class Mapper {
         return new TeacherReadOnlyDTO(teacher.getId(), teacher.getCreatedAt(),
                 teacher.getUpdatedAt(), teacher.getUuid(), teacher.getFirstname(),
                 teacher.getLastname(), teacher.getVat(), teacher.getRegion().getName());
+    }
+
+    public UserEntity mapToUserEntity(UserInsertDTO userInsertDTO) {
+        return new UserEntity(null, userInsertDTO.username(), userInsertDTO.password(),
+                Role.valueOf(userInsertDTO.role().toUpperCase()));
     }
 }
