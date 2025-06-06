@@ -14,6 +14,7 @@ import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
@@ -25,12 +26,13 @@ public class UserController {
     private final UserService userService;
     private final Mapper mapper;
 
-    @GetMapping
+    @GetMapping("/users/register")
     public String getUserForm(Model model) {
         model.addAttribute("userInsertDTO", new UserInsertDTO("", "", ""));
         return "user-form";
     }
 
+    @PostMapping("/users/register")
     public String insertUser(@Valid @ModelAttribute("userInsertDTO") UserInsertDTO userInsertDTO,
                              BindingResult bindingResult,
                              Model model, RedirectAttributes attrs) {

@@ -1,0 +1,1441 @@
+2025-06-06 13:17:41 DEBUG com.zaxxer.hikari.HikariConfig - Driver class com.mysql.cj.jdbc.Driver found in Thread context class loader jdk.internal.loader.ClassLoaders$AppClassLoader@30946e09
+2025-06-06 13:17:42 DEBUG com.zaxxer.hikari.HikariConfig - HikariPool-1 - configuration:
+2025-06-06 13:17:42 DEBUG com.zaxxer.hikari.HikariConfig - allowPoolSuspension.............false
+2025-06-06 13:17:42 DEBUG com.zaxxer.hikari.HikariConfig - autoCommit......................true
+2025-06-06 13:17:42 DEBUG com.zaxxer.hikari.HikariConfig - catalog.........................none
+2025-06-06 13:17:42 DEBUG com.zaxxer.hikari.HikariConfig - connectionInitSql...............none
+2025-06-06 13:17:42 DEBUG com.zaxxer.hikari.HikariConfig - connectionTestQuery.............none
+2025-06-06 13:17:42 DEBUG com.zaxxer.hikari.HikariConfig - connectionTimeout...............30000
+2025-06-06 13:17:42 DEBUG com.zaxxer.hikari.HikariConfig - dataSource......................none
+2025-06-06 13:17:42 DEBUG com.zaxxer.hikari.HikariConfig - dataSourceClassName.............none
+2025-06-06 13:17:42 DEBUG com.zaxxer.hikari.HikariConfig - dataSourceJNDI..................none
+2025-06-06 13:17:42 DEBUG com.zaxxer.hikari.HikariConfig - dataSourceProperties............{password=<masked>}
+2025-06-06 13:17:42 DEBUG com.zaxxer.hikari.HikariConfig - driverClassName................."com.mysql.cj.jdbc.Driver"
+2025-06-06 13:17:42 DEBUG com.zaxxer.hikari.HikariConfig - exceptionOverrideClassName......none
+2025-06-06 13:17:42 DEBUG com.zaxxer.hikari.HikariConfig - healthCheckProperties...........{}
+2025-06-06 13:17:42 DEBUG com.zaxxer.hikari.HikariConfig - healthCheckRegistry.............none
+2025-06-06 13:17:42 DEBUG com.zaxxer.hikari.HikariConfig - idleTimeout.....................600000
+2025-06-06 13:17:42 DEBUG com.zaxxer.hikari.HikariConfig - initializationFailTimeout.......1
+2025-06-06 13:17:42 DEBUG com.zaxxer.hikari.HikariConfig - isolateInternalQueries..........false
+2025-06-06 13:17:42 DEBUG com.zaxxer.hikari.HikariConfig - jdbcUrl.........................jdbc:mysql://serendipityMySQL:3306/springteacher7db?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=Europe/Athens
+2025-06-06 13:17:42 DEBUG com.zaxxer.hikari.HikariConfig - keepaliveTime...................0
+2025-06-06 13:17:42 DEBUG com.zaxxer.hikari.HikariConfig - leakDetectionThreshold..........0
+2025-06-06 13:17:42 DEBUG com.zaxxer.hikari.HikariConfig - maxLifetime.....................1800000
+2025-06-06 13:17:42 DEBUG com.zaxxer.hikari.HikariConfig - maximumPoolSize.................10
+2025-06-06 13:17:42 DEBUG com.zaxxer.hikari.HikariConfig - metricRegistry..................none
+2025-06-06 13:17:42 DEBUG com.zaxxer.hikari.HikariConfig - metricsTrackerFactory...........none
+2025-06-06 13:17:42 DEBUG com.zaxxer.hikari.HikariConfig - minimumIdle.....................10
+2025-06-06 13:17:42 DEBUG com.zaxxer.hikari.HikariConfig - password........................<masked>
+2025-06-06 13:17:42 DEBUG com.zaxxer.hikari.HikariConfig - poolName........................"HikariPool-1"
+2025-06-06 13:17:42 DEBUG com.zaxxer.hikari.HikariConfig - readOnly........................false
+2025-06-06 13:17:42 DEBUG com.zaxxer.hikari.HikariConfig - registerMbeans..................false
+2025-06-06 13:17:42 DEBUG com.zaxxer.hikari.HikariConfig - scheduledExecutor...............none
+2025-06-06 13:17:42 DEBUG com.zaxxer.hikari.HikariConfig - schema..........................none
+2025-06-06 13:17:42 DEBUG com.zaxxer.hikari.HikariConfig - threadFactory...................internal
+2025-06-06 13:17:42 DEBUG com.zaxxer.hikari.HikariConfig - transactionIsolation............default
+2025-06-06 13:17:42 DEBUG com.zaxxer.hikari.HikariConfig - username........................"kleidimos"
+2025-06-06 13:17:42 DEBUG com.zaxxer.hikari.HikariConfig - validationTimeout...............5000
+2025-06-06 13:17:42 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-06-06 13:17:42 DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to create/setup connection: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+2025-06-06 13:17:42 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Cannot acquire connection from data source
+com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at com.mysql.cj.jdbc.exceptions.SQLError.createCommunicationsException(SQLError.java:165)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:55)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:837)
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:420)
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:238)
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:180)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:137)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:360)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:202)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:461)
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:550)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:98)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:111)
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:126)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:483)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcIsolationDelegate.delegateWork(JdbcIsolationDelegate.java:61)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.getJdbcEnvironmentUsingJdbcMetadata(JdbcEnvironmentInitiator.java:336)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:129)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:81)
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:130)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:263)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:238)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:215)
+	at org.hibernate.boot.model.relational.Database.<init>(Database.java:45)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.getDatabase(InFlightMetadataCollectorImpl.java:226)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:194)
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:171)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1442)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1513)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:66)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:390)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:419)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:400)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:366)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1873)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1822)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:607)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:373)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:207)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:970)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:627)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:753)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1362)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1351)
+	at gr.aueb.cf.teacherapp.TeachersApplication.main(TeachersApplication.java:12)
+Caused by: com.mysql.cj.exceptions.CJCommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:52)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:95)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:140)
+	at com.mysql.cj.exceptions.ExceptionFactory.createCommunicationsException(ExceptionFactory.java:156)
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:79)
+	at com.mysql.cj.NativeSession.connect(NativeSession.java:142)
+	at com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:961)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:825)
+	... 48 common frames omitted
+Caused by: java.net.UnknownHostException: serendipityMySQL: Temporary failure in name resolution
+	at java.base/java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
+	at java.base/java.net.InetAddress$PlatformNameService.lookupAllHostAddr(InetAddress.java:934)
+	at java.base/java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1543)
+	at java.base/java.net.InetAddress$NameServiceAddresses.get(InetAddress.java:852)
+	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1533)
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1385)
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1306)
+	at com.mysql.cj.protocol.StandardSocketFactory.connect(StandardSocketFactory.java:121)
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:53)
+	... 51 common frames omitted
+2025-06-06 13:17:44 DEBUG com.zaxxer.hikari.HikariConfig - HikariPool-1 - configuration:
+2025-06-06 13:17:44 DEBUG com.zaxxer.hikari.HikariConfig - allowPoolSuspension.............false
+2025-06-06 13:17:44 DEBUG com.zaxxer.hikari.HikariConfig - autoCommit......................true
+2025-06-06 13:17:44 DEBUG com.zaxxer.hikari.HikariConfig - catalog.........................none
+2025-06-06 13:17:44 DEBUG com.zaxxer.hikari.HikariConfig - connectionInitSql...............none
+2025-06-06 13:17:44 DEBUG com.zaxxer.hikari.HikariConfig - connectionTestQuery.............none
+2025-06-06 13:17:44 DEBUG com.zaxxer.hikari.HikariConfig - connectionTimeout...............30000
+2025-06-06 13:17:44 DEBUG com.zaxxer.hikari.HikariConfig - dataSource......................none
+2025-06-06 13:17:44 DEBUG com.zaxxer.hikari.HikariConfig - dataSourceClassName.............none
+2025-06-06 13:17:44 DEBUG com.zaxxer.hikari.HikariConfig - dataSourceJNDI..................none
+2025-06-06 13:17:44 DEBUG com.zaxxer.hikari.HikariConfig - dataSourceProperties............{password=<masked>}
+2025-06-06 13:17:44 DEBUG com.zaxxer.hikari.HikariConfig - driverClassName................."com.mysql.cj.jdbc.Driver"
+2025-06-06 13:17:44 DEBUG com.zaxxer.hikari.HikariConfig - exceptionOverrideClassName......none
+2025-06-06 13:17:44 DEBUG com.zaxxer.hikari.HikariConfig - healthCheckProperties...........{}
+2025-06-06 13:17:44 DEBUG com.zaxxer.hikari.HikariConfig - healthCheckRegistry.............none
+2025-06-06 13:17:44 DEBUG com.zaxxer.hikari.HikariConfig - idleTimeout.....................600000
+2025-06-06 13:17:44 DEBUG com.zaxxer.hikari.HikariConfig - initializationFailTimeout.......1
+2025-06-06 13:17:44 DEBUG com.zaxxer.hikari.HikariConfig - isolateInternalQueries..........false
+2025-06-06 13:17:44 DEBUG com.zaxxer.hikari.HikariConfig - jdbcUrl.........................jdbc:mysql://serendipityMySQL:3306/springteacher7db?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=Europe/Athens
+2025-06-06 13:17:44 DEBUG com.zaxxer.hikari.HikariConfig - keepaliveTime...................0
+2025-06-06 13:17:44 DEBUG com.zaxxer.hikari.HikariConfig - leakDetectionThreshold..........0
+2025-06-06 13:17:44 DEBUG com.zaxxer.hikari.HikariConfig - maxLifetime.....................1800000
+2025-06-06 13:17:44 DEBUG com.zaxxer.hikari.HikariConfig - maximumPoolSize.................10
+2025-06-06 13:17:44 DEBUG com.zaxxer.hikari.HikariConfig - metricRegistry..................none
+2025-06-06 13:17:44 DEBUG com.zaxxer.hikari.HikariConfig - metricsTrackerFactory...........none
+2025-06-06 13:17:44 DEBUG com.zaxxer.hikari.HikariConfig - minimumIdle.....................10
+2025-06-06 13:17:44 DEBUG com.zaxxer.hikari.HikariConfig - password........................<masked>
+2025-06-06 13:17:44 DEBUG com.zaxxer.hikari.HikariConfig - poolName........................"HikariPool-1"
+2025-06-06 13:17:44 DEBUG com.zaxxer.hikari.HikariConfig - readOnly........................false
+2025-06-06 13:17:44 DEBUG com.zaxxer.hikari.HikariConfig - registerMbeans..................false
+2025-06-06 13:17:44 DEBUG com.zaxxer.hikari.HikariConfig - scheduledExecutor...............none
+2025-06-06 13:17:44 DEBUG com.zaxxer.hikari.HikariConfig - schema..........................none
+2025-06-06 13:17:44 DEBUG com.zaxxer.hikari.HikariConfig - threadFactory...................internal
+2025-06-06 13:17:44 DEBUG com.zaxxer.hikari.HikariConfig - transactionIsolation............default
+2025-06-06 13:17:44 DEBUG com.zaxxer.hikari.HikariConfig - username........................"kleidimos"
+2025-06-06 13:17:44 DEBUG com.zaxxer.hikari.HikariConfig - validationTimeout...............5000
+2025-06-06 13:17:44 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-06-06 13:17:44 DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to create/setup connection: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+2025-06-06 13:17:44 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Cannot acquire connection from data source
+com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at com.mysql.cj.jdbc.exceptions.SQLError.createCommunicationsException(SQLError.java:165)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:55)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:837)
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:420)
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:238)
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:180)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:137)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:360)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:202)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:461)
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:550)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:98)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:111)
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:126)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:483)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.DdlTransactionIsolatorNonJtaImpl.getIsolatedConnection(DdlTransactionIsolatorNonJtaImpl.java:46)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.DdlTransactionIsolatorNonJtaImpl.getIsolatedConnection(DdlTransactionIsolatorNonJtaImpl.java:39)
+	at org.hibernate.tool.schema.internal.exec.ImprovedExtractionContextImpl.getJdbcConnection(ImprovedExtractionContextImpl.java:63)
+	at org.hibernate.tool.schema.internal.exec.ImprovedExtractionContextImpl.getJdbcDatabaseMetaData(ImprovedExtractionContextImpl.java:70)
+	at org.hibernate.tool.schema.extract.internal.InformationExtractorJdbcDatabaseMetaDataImpl.processTableResultSet(InformationExtractorJdbcDatabaseMetaDataImpl.java:65)
+	at org.hibernate.tool.schema.extract.internal.AbstractInformationExtractorImpl.getTables(AbstractInformationExtractorImpl.java:570)
+	at org.hibernate.tool.schema.extract.internal.DatabaseInformationImpl.getTablesInformation(DatabaseInformationImpl.java:122)
+	at org.hibernate.tool.schema.internal.GroupedSchemaMigratorImpl.performTablesMigration(GroupedSchemaMigratorImpl.java:72)
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.performMigration(AbstractSchemaMigrator.java:233)
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.doMigration(AbstractSchemaMigrator.java:112)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:280)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.lambda$process$5(SchemaManagementToolCoordinator.java:144)
+	at java.base/java.util.HashMap.forEach(HashMap.java:1421)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:141)
+	at org.hibernate.boot.internal.SessionFactoryObserverForSchemaExport.sessionFactoryCreated(SessionFactoryObserverForSchemaExport.java:37)
+	at org.hibernate.internal.SessionFactoryObserverChain.sessionFactoryCreated(SessionFactoryObserverChain.java:35)
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:324)
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:463)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1517)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:66)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:390)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:419)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:400)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:366)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1873)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1822)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:607)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:373)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:207)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:970)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:627)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:753)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1362)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1351)
+	at gr.aueb.cf.teacherapp.TeachersApplication.main(TeachersApplication.java:12)
+Caused by: com.mysql.cj.exceptions.CJCommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:52)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:95)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:140)
+	at com.mysql.cj.exceptions.ExceptionFactory.createCommunicationsException(ExceptionFactory.java:156)
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:79)
+	at com.mysql.cj.NativeSession.connect(NativeSession.java:142)
+	at com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:961)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:825)
+	... 53 common frames omitted
+Caused by: java.net.UnknownHostException: serendipityMySQL
+	at java.base/java.net.InetAddress$CachedAddresses.get(InetAddress.java:801)
+	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1533)
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1385)
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1306)
+	at com.mysql.cj.protocol.StandardSocketFactory.connect(StandardSocketFactory.java:121)
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:53)
+	... 56 common frames omitted
+2025-06-06 13:20:07 DEBUG com.zaxxer.hikari.HikariConfig - Driver class com.mysql.cj.jdbc.Driver found in Thread context class loader jdk.internal.loader.ClassLoaders$AppClassLoader@30946e09
+2025-06-06 13:20:08 DEBUG com.zaxxer.hikari.HikariConfig - HikariPool-1 - configuration:
+2025-06-06 13:20:08 DEBUG com.zaxxer.hikari.HikariConfig - allowPoolSuspension.............false
+2025-06-06 13:20:08 DEBUG com.zaxxer.hikari.HikariConfig - autoCommit......................true
+2025-06-06 13:20:08 DEBUG com.zaxxer.hikari.HikariConfig - catalog.........................none
+2025-06-06 13:20:08 DEBUG com.zaxxer.hikari.HikariConfig - connectionInitSql...............none
+2025-06-06 13:20:08 DEBUG com.zaxxer.hikari.HikariConfig - connectionTestQuery.............none
+2025-06-06 13:20:08 DEBUG com.zaxxer.hikari.HikariConfig - connectionTimeout...............30000
+2025-06-06 13:20:08 DEBUG com.zaxxer.hikari.HikariConfig - dataSource......................none
+2025-06-06 13:20:08 DEBUG com.zaxxer.hikari.HikariConfig - dataSourceClassName.............none
+2025-06-06 13:20:08 DEBUG com.zaxxer.hikari.HikariConfig - dataSourceJNDI..................none
+2025-06-06 13:20:08 DEBUG com.zaxxer.hikari.HikariConfig - dataSourceProperties............{password=<masked>}
+2025-06-06 13:20:08 DEBUG com.zaxxer.hikari.HikariConfig - driverClassName................."com.mysql.cj.jdbc.Driver"
+2025-06-06 13:20:08 DEBUG com.zaxxer.hikari.HikariConfig - exceptionOverrideClassName......none
+2025-06-06 13:20:08 DEBUG com.zaxxer.hikari.HikariConfig - healthCheckProperties...........{}
+2025-06-06 13:20:08 DEBUG com.zaxxer.hikari.HikariConfig - healthCheckRegistry.............none
+2025-06-06 13:20:08 DEBUG com.zaxxer.hikari.HikariConfig - idleTimeout.....................600000
+2025-06-06 13:20:08 DEBUG com.zaxxer.hikari.HikariConfig - initializationFailTimeout.......1
+2025-06-06 13:20:08 DEBUG com.zaxxer.hikari.HikariConfig - isolateInternalQueries..........false
+2025-06-06 13:20:08 DEBUG com.zaxxer.hikari.HikariConfig - jdbcUrl.........................jdbc:mysql://localhost:3306/springteacher7db?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=Europe/Athens
+2025-06-06 13:20:08 DEBUG com.zaxxer.hikari.HikariConfig - keepaliveTime...................0
+2025-06-06 13:20:08 DEBUG com.zaxxer.hikari.HikariConfig - leakDetectionThreshold..........0
+2025-06-06 13:20:08 DEBUG com.zaxxer.hikari.HikariConfig - maxLifetime.....................1800000
+2025-06-06 13:20:08 DEBUG com.zaxxer.hikari.HikariConfig - maximumPoolSize.................10
+2025-06-06 13:20:08 DEBUG com.zaxxer.hikari.HikariConfig - metricRegistry..................none
+2025-06-06 13:20:08 DEBUG com.zaxxer.hikari.HikariConfig - metricsTrackerFactory...........none
+2025-06-06 13:20:08 DEBUG com.zaxxer.hikari.HikariConfig - minimumIdle.....................10
+2025-06-06 13:20:08 DEBUG com.zaxxer.hikari.HikariConfig - password........................<masked>
+2025-06-06 13:20:08 DEBUG com.zaxxer.hikari.HikariConfig - poolName........................"HikariPool-1"
+2025-06-06 13:20:08 DEBUG com.zaxxer.hikari.HikariConfig - readOnly........................false
+2025-06-06 13:20:08 DEBUG com.zaxxer.hikari.HikariConfig - registerMbeans..................false
+2025-06-06 13:20:08 DEBUG com.zaxxer.hikari.HikariConfig - scheduledExecutor...............none
+2025-06-06 13:20:08 DEBUG com.zaxxer.hikari.HikariConfig - schema..........................none
+2025-06-06 13:20:08 DEBUG com.zaxxer.hikari.HikariConfig - threadFactory...................internal
+2025-06-06 13:20:08 DEBUG com.zaxxer.hikari.HikariConfig - transactionIsolation............default
+2025-06-06 13:20:08 DEBUG com.zaxxer.hikari.HikariConfig - username........................"kleidimos"
+2025-06-06 13:20:08 DEBUG com.zaxxer.hikari.HikariConfig - validationTimeout...............5000
+2025-06-06 13:20:08 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-06-06 13:20:08 DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to create/setup connection: Public Key Retrieval is not allowed
+2025-06-06 13:20:08 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Cannot acquire connection from data source
+java.sql.SQLNonTransientConnectionException: Public Key Retrieval is not allowed
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:102)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:114)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:837)
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:420)
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:238)
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:180)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:137)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:360)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:202)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:461)
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:550)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:98)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:111)
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:126)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:483)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcIsolationDelegate.delegateWork(JdbcIsolationDelegate.java:61)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.getJdbcEnvironmentUsingJdbcMetadata(JdbcEnvironmentInitiator.java:336)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:129)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:81)
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:130)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:263)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:238)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:215)
+	at org.hibernate.boot.model.relational.Database.<init>(Database.java:45)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.getDatabase(InFlightMetadataCollectorImpl.java:226)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:194)
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:171)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1442)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1513)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:66)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:390)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:419)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:400)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:366)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1873)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1822)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:607)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:373)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:207)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:970)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:627)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:753)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1362)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1351)
+	at gr.aueb.cf.teacherapp.TeachersApplication.main(TeachersApplication.java:12)
+Caused by: com.mysql.cj.exceptions.UnableToConnectException: Public Key Retrieval is not allowed
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:52)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:76)
+	at com.mysql.cj.protocol.a.authentication.CachingSha2PasswordPlugin.nextAuthenticationStep(CachingSha2PasswordPlugin.java:122)
+	at com.mysql.cj.protocol.a.authentication.CachingSha2PasswordPlugin.nextAuthenticationStep(CachingSha2PasswordPlugin.java:40)
+	at com.mysql.cj.protocol.a.NativeAuthenticationProvider.proceedHandshakeWithPluggableAuthentication(NativeAuthenticationProvider.java:436)
+	at com.mysql.cj.protocol.a.NativeAuthenticationProvider.connect(NativeAuthenticationProvider.java:206)
+	at com.mysql.cj.protocol.a.NativeProtocol.connect(NativeProtocol.java:1333)
+	at com.mysql.cj.NativeSession.connect(NativeSession.java:155)
+	at com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:961)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:825)
+	... 48 common frames omitted
+2025-06-06 13:20:10 DEBUG com.zaxxer.hikari.HikariConfig - HikariPool-1 - configuration:
+2025-06-06 13:20:10 DEBUG com.zaxxer.hikari.HikariConfig - allowPoolSuspension.............false
+2025-06-06 13:20:10 DEBUG com.zaxxer.hikari.HikariConfig - autoCommit......................true
+2025-06-06 13:20:10 DEBUG com.zaxxer.hikari.HikariConfig - catalog.........................none
+2025-06-06 13:20:10 DEBUG com.zaxxer.hikari.HikariConfig - connectionInitSql...............none
+2025-06-06 13:20:10 DEBUG com.zaxxer.hikari.HikariConfig - connectionTestQuery.............none
+2025-06-06 13:20:10 DEBUG com.zaxxer.hikari.HikariConfig - connectionTimeout...............30000
+2025-06-06 13:20:10 DEBUG com.zaxxer.hikari.HikariConfig - dataSource......................none
+2025-06-06 13:20:10 DEBUG com.zaxxer.hikari.HikariConfig - dataSourceClassName.............none
+2025-06-06 13:20:10 DEBUG com.zaxxer.hikari.HikariConfig - dataSourceJNDI..................none
+2025-06-06 13:20:10 DEBUG com.zaxxer.hikari.HikariConfig - dataSourceProperties............{password=<masked>}
+2025-06-06 13:20:10 DEBUG com.zaxxer.hikari.HikariConfig - driverClassName................."com.mysql.cj.jdbc.Driver"
+2025-06-06 13:20:10 DEBUG com.zaxxer.hikari.HikariConfig - exceptionOverrideClassName......none
+2025-06-06 13:20:10 DEBUG com.zaxxer.hikari.HikariConfig - healthCheckProperties...........{}
+2025-06-06 13:20:10 DEBUG com.zaxxer.hikari.HikariConfig - healthCheckRegistry.............none
+2025-06-06 13:20:10 DEBUG com.zaxxer.hikari.HikariConfig - idleTimeout.....................600000
+2025-06-06 13:20:10 DEBUG com.zaxxer.hikari.HikariConfig - initializationFailTimeout.......1
+2025-06-06 13:20:10 DEBUG com.zaxxer.hikari.HikariConfig - isolateInternalQueries..........false
+2025-06-06 13:20:10 DEBUG com.zaxxer.hikari.HikariConfig - jdbcUrl.........................jdbc:mysql://localhost:3306/springteacher7db?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=Europe/Athens
+2025-06-06 13:20:10 DEBUG com.zaxxer.hikari.HikariConfig - keepaliveTime...................0
+2025-06-06 13:20:10 DEBUG com.zaxxer.hikari.HikariConfig - leakDetectionThreshold..........0
+2025-06-06 13:20:10 DEBUG com.zaxxer.hikari.HikariConfig - maxLifetime.....................1800000
+2025-06-06 13:20:10 DEBUG com.zaxxer.hikari.HikariConfig - maximumPoolSize.................10
+2025-06-06 13:20:10 DEBUG com.zaxxer.hikari.HikariConfig - metricRegistry..................none
+2025-06-06 13:20:10 DEBUG com.zaxxer.hikari.HikariConfig - metricsTrackerFactory...........none
+2025-06-06 13:20:10 DEBUG com.zaxxer.hikari.HikariConfig - minimumIdle.....................10
+2025-06-06 13:20:10 DEBUG com.zaxxer.hikari.HikariConfig - password........................<masked>
+2025-06-06 13:20:10 DEBUG com.zaxxer.hikari.HikariConfig - poolName........................"HikariPool-1"
+2025-06-06 13:20:10 DEBUG com.zaxxer.hikari.HikariConfig - readOnly........................false
+2025-06-06 13:20:10 DEBUG com.zaxxer.hikari.HikariConfig - registerMbeans..................false
+2025-06-06 13:20:10 DEBUG com.zaxxer.hikari.HikariConfig - scheduledExecutor...............none
+2025-06-06 13:20:10 DEBUG com.zaxxer.hikari.HikariConfig - schema..........................none
+2025-06-06 13:20:10 DEBUG com.zaxxer.hikari.HikariConfig - threadFactory...................internal
+2025-06-06 13:20:10 DEBUG com.zaxxer.hikari.HikariConfig - transactionIsolation............default
+2025-06-06 13:20:10 DEBUG com.zaxxer.hikari.HikariConfig - username........................"kleidimos"
+2025-06-06 13:20:10 DEBUG com.zaxxer.hikari.HikariConfig - validationTimeout...............5000
+2025-06-06 13:20:10 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-06-06 13:20:10 DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to create/setup connection: Public Key Retrieval is not allowed
+2025-06-06 13:20:10 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Cannot acquire connection from data source
+java.sql.SQLNonTransientConnectionException: Public Key Retrieval is not allowed
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:102)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:114)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:837)
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:420)
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:238)
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:180)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:137)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:360)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:202)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:461)
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:550)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:98)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:111)
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:126)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:483)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.DdlTransactionIsolatorNonJtaImpl.getIsolatedConnection(DdlTransactionIsolatorNonJtaImpl.java:46)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.DdlTransactionIsolatorNonJtaImpl.getIsolatedConnection(DdlTransactionIsolatorNonJtaImpl.java:39)
+	at org.hibernate.tool.schema.internal.exec.ImprovedExtractionContextImpl.getJdbcConnection(ImprovedExtractionContextImpl.java:63)
+	at org.hibernate.tool.schema.internal.exec.ImprovedExtractionContextImpl.getJdbcDatabaseMetaData(ImprovedExtractionContextImpl.java:70)
+	at org.hibernate.tool.schema.extract.internal.InformationExtractorJdbcDatabaseMetaDataImpl.processTableResultSet(InformationExtractorJdbcDatabaseMetaDataImpl.java:65)
+	at org.hibernate.tool.schema.extract.internal.AbstractInformationExtractorImpl.getTables(AbstractInformationExtractorImpl.java:570)
+	at org.hibernate.tool.schema.extract.internal.DatabaseInformationImpl.getTablesInformation(DatabaseInformationImpl.java:122)
+	at org.hibernate.tool.schema.internal.GroupedSchemaMigratorImpl.performTablesMigration(GroupedSchemaMigratorImpl.java:72)
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.performMigration(AbstractSchemaMigrator.java:233)
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.doMigration(AbstractSchemaMigrator.java:112)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:280)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.lambda$process$5(SchemaManagementToolCoordinator.java:144)
+	at java.base/java.util.HashMap.forEach(HashMap.java:1421)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:141)
+	at org.hibernate.boot.internal.SessionFactoryObserverForSchemaExport.sessionFactoryCreated(SessionFactoryObserverForSchemaExport.java:37)
+	at org.hibernate.internal.SessionFactoryObserverChain.sessionFactoryCreated(SessionFactoryObserverChain.java:35)
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:324)
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:463)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1517)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:66)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:390)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:419)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:400)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:366)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1873)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1822)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:607)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:373)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:207)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:970)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:627)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:753)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1362)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1351)
+	at gr.aueb.cf.teacherapp.TeachersApplication.main(TeachersApplication.java:12)
+Caused by: com.mysql.cj.exceptions.UnableToConnectException: Public Key Retrieval is not allowed
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:52)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:76)
+	at com.mysql.cj.protocol.a.authentication.CachingSha2PasswordPlugin.nextAuthenticationStep(CachingSha2PasswordPlugin.java:122)
+	at com.mysql.cj.protocol.a.authentication.CachingSha2PasswordPlugin.nextAuthenticationStep(CachingSha2PasswordPlugin.java:40)
+	at com.mysql.cj.protocol.a.NativeAuthenticationProvider.proceedHandshakeWithPluggableAuthentication(NativeAuthenticationProvider.java:436)
+	at com.mysql.cj.protocol.a.NativeAuthenticationProvider.connect(NativeAuthenticationProvider.java:206)
+	at com.mysql.cj.protocol.a.NativeProtocol.connect(NativeProtocol.java:1333)
+	at com.mysql.cj.NativeSession.connect(NativeSession.java:155)
+	at com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:961)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:825)
+	... 53 common frames omitted
+2025-06-06 13:23:56 DEBUG com.zaxxer.hikari.HikariConfig - Driver class com.mysql.cj.jdbc.Driver found in Thread context class loader jdk.internal.loader.ClassLoaders$AppClassLoader@30946e09
+2025-06-06 13:23:57 DEBUG com.zaxxer.hikari.HikariConfig - HikariPool-1 - configuration:
+2025-06-06 13:23:57 DEBUG com.zaxxer.hikari.HikariConfig - allowPoolSuspension.............false
+2025-06-06 13:23:57 DEBUG com.zaxxer.hikari.HikariConfig - autoCommit......................true
+2025-06-06 13:23:57 DEBUG com.zaxxer.hikari.HikariConfig - catalog.........................none
+2025-06-06 13:23:57 DEBUG com.zaxxer.hikari.HikariConfig - connectionInitSql...............none
+2025-06-06 13:23:57 DEBUG com.zaxxer.hikari.HikariConfig - connectionTestQuery.............none
+2025-06-06 13:23:57 DEBUG com.zaxxer.hikari.HikariConfig - connectionTimeout...............30000
+2025-06-06 13:23:57 DEBUG com.zaxxer.hikari.HikariConfig - dataSource......................none
+2025-06-06 13:23:57 DEBUG com.zaxxer.hikari.HikariConfig - dataSourceClassName.............none
+2025-06-06 13:23:57 DEBUG com.zaxxer.hikari.HikariConfig - dataSourceJNDI..................none
+2025-06-06 13:23:57 DEBUG com.zaxxer.hikari.HikariConfig - dataSourceProperties............{password=<masked>}
+2025-06-06 13:23:57 DEBUG com.zaxxer.hikari.HikariConfig - driverClassName................."com.mysql.cj.jdbc.Driver"
+2025-06-06 13:23:57 DEBUG com.zaxxer.hikari.HikariConfig - exceptionOverrideClassName......none
+2025-06-06 13:23:57 DEBUG com.zaxxer.hikari.HikariConfig - healthCheckProperties...........{}
+2025-06-06 13:23:57 DEBUG com.zaxxer.hikari.HikariConfig - healthCheckRegistry.............none
+2025-06-06 13:23:57 DEBUG com.zaxxer.hikari.HikariConfig - idleTimeout.....................600000
+2025-06-06 13:23:57 DEBUG com.zaxxer.hikari.HikariConfig - initializationFailTimeout.......1
+2025-06-06 13:23:57 DEBUG com.zaxxer.hikari.HikariConfig - isolateInternalQueries..........false
+2025-06-06 13:23:57 DEBUG com.zaxxer.hikari.HikariConfig - jdbcUrl.........................jdbc:mysql://localhost:3306/springteacher7db?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=Europe/Athens
+2025-06-06 13:23:57 DEBUG com.zaxxer.hikari.HikariConfig - keepaliveTime...................0
+2025-06-06 13:23:57 DEBUG com.zaxxer.hikari.HikariConfig - leakDetectionThreshold..........0
+2025-06-06 13:23:57 DEBUG com.zaxxer.hikari.HikariConfig - maxLifetime.....................1800000
+2025-06-06 13:23:57 DEBUG com.zaxxer.hikari.HikariConfig - maximumPoolSize.................10
+2025-06-06 13:23:57 DEBUG com.zaxxer.hikari.HikariConfig - metricRegistry..................none
+2025-06-06 13:23:57 DEBUG com.zaxxer.hikari.HikariConfig - metricsTrackerFactory...........none
+2025-06-06 13:23:57 DEBUG com.zaxxer.hikari.HikariConfig - minimumIdle.....................10
+2025-06-06 13:23:57 DEBUG com.zaxxer.hikari.HikariConfig - password........................<masked>
+2025-06-06 13:23:57 DEBUG com.zaxxer.hikari.HikariConfig - poolName........................"HikariPool-1"
+2025-06-06 13:23:57 DEBUG com.zaxxer.hikari.HikariConfig - readOnly........................false
+2025-06-06 13:23:57 DEBUG com.zaxxer.hikari.HikariConfig - registerMbeans..................false
+2025-06-06 13:23:57 DEBUG com.zaxxer.hikari.HikariConfig - scheduledExecutor...............none
+2025-06-06 13:23:57 DEBUG com.zaxxer.hikari.HikariConfig - schema..........................none
+2025-06-06 13:23:57 DEBUG com.zaxxer.hikari.HikariConfig - threadFactory...................internal
+2025-06-06 13:23:57 DEBUG com.zaxxer.hikari.HikariConfig - transactionIsolation............default
+2025-06-06 13:23:57 DEBUG com.zaxxer.hikari.HikariConfig - username........................"kleidimos"
+2025-06-06 13:23:57 DEBUG com.zaxxer.hikari.HikariConfig - validationTimeout...............5000
+2025-06-06 13:23:57 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-06-06 13:23:57 DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to create/setup connection: Public Key Retrieval is not allowed
+2025-06-06 13:23:57 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Cannot acquire connection from data source
+java.sql.SQLNonTransientConnectionException: Public Key Retrieval is not allowed
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:102)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:114)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:837)
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:420)
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:238)
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:180)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:137)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:360)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:202)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:461)
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:550)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:98)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:111)
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:126)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:483)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcIsolationDelegate.delegateWork(JdbcIsolationDelegate.java:61)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.getJdbcEnvironmentUsingJdbcMetadata(JdbcEnvironmentInitiator.java:336)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:129)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:81)
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:130)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:263)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:238)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:215)
+	at org.hibernate.boot.model.relational.Database.<init>(Database.java:45)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.getDatabase(InFlightMetadataCollectorImpl.java:226)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:194)
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:171)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1442)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1513)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:66)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:390)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:419)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:400)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:366)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1873)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1822)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:607)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:373)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:207)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:970)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:627)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:753)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1362)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1351)
+	at gr.aueb.cf.teacherapp.TeachersApplication.main(TeachersApplication.java:12)
+Caused by: com.mysql.cj.exceptions.UnableToConnectException: Public Key Retrieval is not allowed
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:52)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:76)
+	at com.mysql.cj.protocol.a.authentication.CachingSha2PasswordPlugin.nextAuthenticationStep(CachingSha2PasswordPlugin.java:122)
+	at com.mysql.cj.protocol.a.authentication.CachingSha2PasswordPlugin.nextAuthenticationStep(CachingSha2PasswordPlugin.java:40)
+	at com.mysql.cj.protocol.a.NativeAuthenticationProvider.proceedHandshakeWithPluggableAuthentication(NativeAuthenticationProvider.java:436)
+	at com.mysql.cj.protocol.a.NativeAuthenticationProvider.connect(NativeAuthenticationProvider.java:206)
+	at com.mysql.cj.protocol.a.NativeProtocol.connect(NativeProtocol.java:1333)
+	at com.mysql.cj.NativeSession.connect(NativeSession.java:155)
+	at com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:961)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:825)
+	... 48 common frames omitted
+2025-06-06 13:23:59 DEBUG com.zaxxer.hikari.HikariConfig - HikariPool-1 - configuration:
+2025-06-06 13:23:59 DEBUG com.zaxxer.hikari.HikariConfig - allowPoolSuspension.............false
+2025-06-06 13:23:59 DEBUG com.zaxxer.hikari.HikariConfig - autoCommit......................true
+2025-06-06 13:23:59 DEBUG com.zaxxer.hikari.HikariConfig - catalog.........................none
+2025-06-06 13:23:59 DEBUG com.zaxxer.hikari.HikariConfig - connectionInitSql...............none
+2025-06-06 13:23:59 DEBUG com.zaxxer.hikari.HikariConfig - connectionTestQuery.............none
+2025-06-06 13:23:59 DEBUG com.zaxxer.hikari.HikariConfig - connectionTimeout...............30000
+2025-06-06 13:23:59 DEBUG com.zaxxer.hikari.HikariConfig - dataSource......................none
+2025-06-06 13:23:59 DEBUG com.zaxxer.hikari.HikariConfig - dataSourceClassName.............none
+2025-06-06 13:23:59 DEBUG com.zaxxer.hikari.HikariConfig - dataSourceJNDI..................none
+2025-06-06 13:23:59 DEBUG com.zaxxer.hikari.HikariConfig - dataSourceProperties............{password=<masked>}
+2025-06-06 13:23:59 DEBUG com.zaxxer.hikari.HikariConfig - driverClassName................."com.mysql.cj.jdbc.Driver"
+2025-06-06 13:23:59 DEBUG com.zaxxer.hikari.HikariConfig - exceptionOverrideClassName......none
+2025-06-06 13:23:59 DEBUG com.zaxxer.hikari.HikariConfig - healthCheckProperties...........{}
+2025-06-06 13:23:59 DEBUG com.zaxxer.hikari.HikariConfig - healthCheckRegistry.............none
+2025-06-06 13:23:59 DEBUG com.zaxxer.hikari.HikariConfig - idleTimeout.....................600000
+2025-06-06 13:23:59 DEBUG com.zaxxer.hikari.HikariConfig - initializationFailTimeout.......1
+2025-06-06 13:23:59 DEBUG com.zaxxer.hikari.HikariConfig - isolateInternalQueries..........false
+2025-06-06 13:23:59 DEBUG com.zaxxer.hikari.HikariConfig - jdbcUrl.........................jdbc:mysql://localhost:3306/springteacher7db?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=Europe/Athens
+2025-06-06 13:23:59 DEBUG com.zaxxer.hikari.HikariConfig - keepaliveTime...................0
+2025-06-06 13:23:59 DEBUG com.zaxxer.hikari.HikariConfig - leakDetectionThreshold..........0
+2025-06-06 13:23:59 DEBUG com.zaxxer.hikari.HikariConfig - maxLifetime.....................1800000
+2025-06-06 13:23:59 DEBUG com.zaxxer.hikari.HikariConfig - maximumPoolSize.................10
+2025-06-06 13:23:59 DEBUG com.zaxxer.hikari.HikariConfig - metricRegistry..................none
+2025-06-06 13:23:59 DEBUG com.zaxxer.hikari.HikariConfig - metricsTrackerFactory...........none
+2025-06-06 13:23:59 DEBUG com.zaxxer.hikari.HikariConfig - minimumIdle.....................10
+2025-06-06 13:23:59 DEBUG com.zaxxer.hikari.HikariConfig - password........................<masked>
+2025-06-06 13:23:59 DEBUG com.zaxxer.hikari.HikariConfig - poolName........................"HikariPool-1"
+2025-06-06 13:23:59 DEBUG com.zaxxer.hikari.HikariConfig - readOnly........................false
+2025-06-06 13:23:59 DEBUG com.zaxxer.hikari.HikariConfig - registerMbeans..................false
+2025-06-06 13:23:59 DEBUG com.zaxxer.hikari.HikariConfig - scheduledExecutor...............none
+2025-06-06 13:23:59 DEBUG com.zaxxer.hikari.HikariConfig - schema..........................none
+2025-06-06 13:23:59 DEBUG com.zaxxer.hikari.HikariConfig - threadFactory...................internal
+2025-06-06 13:23:59 DEBUG com.zaxxer.hikari.HikariConfig - transactionIsolation............default
+2025-06-06 13:23:59 DEBUG com.zaxxer.hikari.HikariConfig - username........................"kleidimos"
+2025-06-06 13:23:59 DEBUG com.zaxxer.hikari.HikariConfig - validationTimeout...............5000
+2025-06-06 13:23:59 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-06-06 13:23:59 DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to create/setup connection: Public Key Retrieval is not allowed
+2025-06-06 13:23:59 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Cannot acquire connection from data source
+java.sql.SQLNonTransientConnectionException: Public Key Retrieval is not allowed
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:102)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:114)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:837)
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:420)
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:238)
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:180)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:137)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:360)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:202)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:461)
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:550)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:98)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:111)
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:126)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:483)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.DdlTransactionIsolatorNonJtaImpl.getIsolatedConnection(DdlTransactionIsolatorNonJtaImpl.java:46)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.DdlTransactionIsolatorNonJtaImpl.getIsolatedConnection(DdlTransactionIsolatorNonJtaImpl.java:39)
+	at org.hibernate.tool.schema.internal.exec.ImprovedExtractionContextImpl.getJdbcConnection(ImprovedExtractionContextImpl.java:63)
+	at org.hibernate.tool.schema.internal.exec.ImprovedExtractionContextImpl.getJdbcDatabaseMetaData(ImprovedExtractionContextImpl.java:70)
+	at org.hibernate.tool.schema.extract.internal.InformationExtractorJdbcDatabaseMetaDataImpl.processTableResultSet(InformationExtractorJdbcDatabaseMetaDataImpl.java:65)
+	at org.hibernate.tool.schema.extract.internal.AbstractInformationExtractorImpl.getTables(AbstractInformationExtractorImpl.java:570)
+	at org.hibernate.tool.schema.extract.internal.DatabaseInformationImpl.getTablesInformation(DatabaseInformationImpl.java:122)
+	at org.hibernate.tool.schema.internal.GroupedSchemaMigratorImpl.performTablesMigration(GroupedSchemaMigratorImpl.java:72)
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.performMigration(AbstractSchemaMigrator.java:233)
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.doMigration(AbstractSchemaMigrator.java:112)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:280)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.lambda$process$5(SchemaManagementToolCoordinator.java:144)
+	at java.base/java.util.HashMap.forEach(HashMap.java:1421)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:141)
+	at org.hibernate.boot.internal.SessionFactoryObserverForSchemaExport.sessionFactoryCreated(SessionFactoryObserverForSchemaExport.java:37)
+	at org.hibernate.internal.SessionFactoryObserverChain.sessionFactoryCreated(SessionFactoryObserverChain.java:35)
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:324)
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:463)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1517)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:66)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:390)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:419)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:400)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:366)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1873)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1822)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:607)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:373)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:207)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:970)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:627)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:753)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1362)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1351)
+	at gr.aueb.cf.teacherapp.TeachersApplication.main(TeachersApplication.java:12)
+Caused by: com.mysql.cj.exceptions.UnableToConnectException: Public Key Retrieval is not allowed
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:52)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:76)
+	at com.mysql.cj.protocol.a.authentication.CachingSha2PasswordPlugin.nextAuthenticationStep(CachingSha2PasswordPlugin.java:122)
+	at com.mysql.cj.protocol.a.authentication.CachingSha2PasswordPlugin.nextAuthenticationStep(CachingSha2PasswordPlugin.java:40)
+	at com.mysql.cj.protocol.a.NativeAuthenticationProvider.proceedHandshakeWithPluggableAuthentication(NativeAuthenticationProvider.java:436)
+	at com.mysql.cj.protocol.a.NativeAuthenticationProvider.connect(NativeAuthenticationProvider.java:206)
+	at com.mysql.cj.protocol.a.NativeProtocol.connect(NativeProtocol.java:1333)
+	at com.mysql.cj.NativeSession.connect(NativeSession.java:155)
+	at com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:961)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:825)
+	... 53 common frames omitted
+2025-06-06 13:33:40 DEBUG com.zaxxer.hikari.HikariConfig - Driver class com.mysql.cj.jdbc.Driver found in Thread context class loader jdk.internal.loader.ClassLoaders$AppClassLoader@30946e09
+2025-06-06 13:33:41 DEBUG com.zaxxer.hikari.HikariConfig - HikariPool-1 - configuration:
+2025-06-06 13:33:41 DEBUG com.zaxxer.hikari.HikariConfig - allowPoolSuspension.............false
+2025-06-06 13:33:41 DEBUG com.zaxxer.hikari.HikariConfig - autoCommit......................true
+2025-06-06 13:33:41 DEBUG com.zaxxer.hikari.HikariConfig - catalog.........................none
+2025-06-06 13:33:41 DEBUG com.zaxxer.hikari.HikariConfig - connectionInitSql...............none
+2025-06-06 13:33:41 DEBUG com.zaxxer.hikari.HikariConfig - connectionTestQuery.............none
+2025-06-06 13:33:41 DEBUG com.zaxxer.hikari.HikariConfig - connectionTimeout...............30000
+2025-06-06 13:33:41 DEBUG com.zaxxer.hikari.HikariConfig - dataSource......................none
+2025-06-06 13:33:41 DEBUG com.zaxxer.hikari.HikariConfig - dataSourceClassName.............none
+2025-06-06 13:33:41 DEBUG com.zaxxer.hikari.HikariConfig - dataSourceJNDI..................none
+2025-06-06 13:33:41 DEBUG com.zaxxer.hikari.HikariConfig - dataSourceProperties............{password=<masked>}
+2025-06-06 13:33:41 DEBUG com.zaxxer.hikari.HikariConfig - driverClassName................."com.mysql.cj.jdbc.Driver"
+2025-06-06 13:33:41 DEBUG com.zaxxer.hikari.HikariConfig - exceptionOverrideClassName......none
+2025-06-06 13:33:41 DEBUG com.zaxxer.hikari.HikariConfig - healthCheckProperties...........{}
+2025-06-06 13:33:41 DEBUG com.zaxxer.hikari.HikariConfig - healthCheckRegistry.............none
+2025-06-06 13:33:41 DEBUG com.zaxxer.hikari.HikariConfig - idleTimeout.....................600000
+2025-06-06 13:33:41 DEBUG com.zaxxer.hikari.HikariConfig - initializationFailTimeout.......1
+2025-06-06 13:33:41 DEBUG com.zaxxer.hikari.HikariConfig - isolateInternalQueries..........false
+2025-06-06 13:33:41 DEBUG com.zaxxer.hikari.HikariConfig - jdbcUrl.........................jdbc:mysql://localhost:3306/springteacher7db?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=Europe/Athens
+2025-06-06 13:33:41 DEBUG com.zaxxer.hikari.HikariConfig - keepaliveTime...................0
+2025-06-06 13:33:41 DEBUG com.zaxxer.hikari.HikariConfig - leakDetectionThreshold..........0
+2025-06-06 13:33:41 DEBUG com.zaxxer.hikari.HikariConfig - maxLifetime.....................1800000
+2025-06-06 13:33:41 DEBUG com.zaxxer.hikari.HikariConfig - maximumPoolSize.................10
+2025-06-06 13:33:41 DEBUG com.zaxxer.hikari.HikariConfig - metricRegistry..................none
+2025-06-06 13:33:41 DEBUG com.zaxxer.hikari.HikariConfig - metricsTrackerFactory...........none
+2025-06-06 13:33:41 DEBUG com.zaxxer.hikari.HikariConfig - minimumIdle.....................10
+2025-06-06 13:33:41 DEBUG com.zaxxer.hikari.HikariConfig - password........................<masked>
+2025-06-06 13:33:41 DEBUG com.zaxxer.hikari.HikariConfig - poolName........................"HikariPool-1"
+2025-06-06 13:33:41 DEBUG com.zaxxer.hikari.HikariConfig - readOnly........................false
+2025-06-06 13:33:41 DEBUG com.zaxxer.hikari.HikariConfig - registerMbeans..................false
+2025-06-06 13:33:41 DEBUG com.zaxxer.hikari.HikariConfig - scheduledExecutor...............none
+2025-06-06 13:33:41 DEBUG com.zaxxer.hikari.HikariConfig - schema..........................none
+2025-06-06 13:33:41 DEBUG com.zaxxer.hikari.HikariConfig - threadFactory...................internal
+2025-06-06 13:33:41 DEBUG com.zaxxer.hikari.HikariConfig - transactionIsolation............default
+2025-06-06 13:33:41 DEBUG com.zaxxer.hikari.HikariConfig - username........................"kleidimos"
+2025-06-06 13:33:41 DEBUG com.zaxxer.hikari.HikariConfig - validationTimeout...............5000
+2025-06-06 13:33:41 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-06-06 13:33:41 DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to create/setup connection: Public Key Retrieval is not allowed
+2025-06-06 13:33:41 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Cannot acquire connection from data source
+java.sql.SQLNonTransientConnectionException: Public Key Retrieval is not allowed
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:102)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:114)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:837)
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:420)
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:238)
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:180)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:137)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:360)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:202)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:461)
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:550)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:98)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:111)
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:126)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:483)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcIsolationDelegate.delegateWork(JdbcIsolationDelegate.java:61)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.getJdbcEnvironmentUsingJdbcMetadata(JdbcEnvironmentInitiator.java:336)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:129)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:81)
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:130)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:263)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:238)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:215)
+	at org.hibernate.boot.model.relational.Database.<init>(Database.java:45)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.getDatabase(InFlightMetadataCollectorImpl.java:226)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:194)
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:171)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1442)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1513)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:66)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:390)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:419)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:400)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:366)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1873)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1822)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:607)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:373)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:207)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:970)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:627)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:753)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1362)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1351)
+	at gr.aueb.cf.teacherapp.TeachersApplication.main(TeachersApplication.java:12)
+Caused by: com.mysql.cj.exceptions.UnableToConnectException: Public Key Retrieval is not allowed
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:52)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:76)
+	at com.mysql.cj.protocol.a.authentication.CachingSha2PasswordPlugin.nextAuthenticationStep(CachingSha2PasswordPlugin.java:122)
+	at com.mysql.cj.protocol.a.authentication.CachingSha2PasswordPlugin.nextAuthenticationStep(CachingSha2PasswordPlugin.java:40)
+	at com.mysql.cj.protocol.a.NativeAuthenticationProvider.proceedHandshakeWithPluggableAuthentication(NativeAuthenticationProvider.java:436)
+	at com.mysql.cj.protocol.a.NativeAuthenticationProvider.connect(NativeAuthenticationProvider.java:206)
+	at com.mysql.cj.protocol.a.NativeProtocol.connect(NativeProtocol.java:1333)
+	at com.mysql.cj.NativeSession.connect(NativeSession.java:155)
+	at com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:961)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:825)
+	... 48 common frames omitted
+2025-06-06 13:33:43 DEBUG com.zaxxer.hikari.HikariConfig - HikariPool-1 - configuration:
+2025-06-06 13:33:43 DEBUG com.zaxxer.hikari.HikariConfig - allowPoolSuspension.............false
+2025-06-06 13:33:43 DEBUG com.zaxxer.hikari.HikariConfig - autoCommit......................true
+2025-06-06 13:33:43 DEBUG com.zaxxer.hikari.HikariConfig - catalog.........................none
+2025-06-06 13:33:43 DEBUG com.zaxxer.hikari.HikariConfig - connectionInitSql...............none
+2025-06-06 13:33:43 DEBUG com.zaxxer.hikari.HikariConfig - connectionTestQuery.............none
+2025-06-06 13:33:43 DEBUG com.zaxxer.hikari.HikariConfig - connectionTimeout...............30000
+2025-06-06 13:33:43 DEBUG com.zaxxer.hikari.HikariConfig - dataSource......................none
+2025-06-06 13:33:43 DEBUG com.zaxxer.hikari.HikariConfig - dataSourceClassName.............none
+2025-06-06 13:33:43 DEBUG com.zaxxer.hikari.HikariConfig - dataSourceJNDI..................none
+2025-06-06 13:33:43 DEBUG com.zaxxer.hikari.HikariConfig - dataSourceProperties............{password=<masked>}
+2025-06-06 13:33:43 DEBUG com.zaxxer.hikari.HikariConfig - driverClassName................."com.mysql.cj.jdbc.Driver"
+2025-06-06 13:33:43 DEBUG com.zaxxer.hikari.HikariConfig - exceptionOverrideClassName......none
+2025-06-06 13:33:43 DEBUG com.zaxxer.hikari.HikariConfig - healthCheckProperties...........{}
+2025-06-06 13:33:43 DEBUG com.zaxxer.hikari.HikariConfig - healthCheckRegistry.............none
+2025-06-06 13:33:43 DEBUG com.zaxxer.hikari.HikariConfig - idleTimeout.....................600000
+2025-06-06 13:33:43 DEBUG com.zaxxer.hikari.HikariConfig - initializationFailTimeout.......1
+2025-06-06 13:33:43 DEBUG com.zaxxer.hikari.HikariConfig - isolateInternalQueries..........false
+2025-06-06 13:33:43 DEBUG com.zaxxer.hikari.HikariConfig - jdbcUrl.........................jdbc:mysql://localhost:3306/springteacher7db?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=Europe/Athens
+2025-06-06 13:33:43 DEBUG com.zaxxer.hikari.HikariConfig - keepaliveTime...................0
+2025-06-06 13:33:43 DEBUG com.zaxxer.hikari.HikariConfig - leakDetectionThreshold..........0
+2025-06-06 13:33:43 DEBUG com.zaxxer.hikari.HikariConfig - maxLifetime.....................1800000
+2025-06-06 13:33:43 DEBUG com.zaxxer.hikari.HikariConfig - maximumPoolSize.................10
+2025-06-06 13:33:43 DEBUG com.zaxxer.hikari.HikariConfig - metricRegistry..................none
+2025-06-06 13:33:43 DEBUG com.zaxxer.hikari.HikariConfig - metricsTrackerFactory...........none
+2025-06-06 13:33:43 DEBUG com.zaxxer.hikari.HikariConfig - minimumIdle.....................10
+2025-06-06 13:33:43 DEBUG com.zaxxer.hikari.HikariConfig - password........................<masked>
+2025-06-06 13:33:43 DEBUG com.zaxxer.hikari.HikariConfig - poolName........................"HikariPool-1"
+2025-06-06 13:33:43 DEBUG com.zaxxer.hikari.HikariConfig - readOnly........................false
+2025-06-06 13:33:43 DEBUG com.zaxxer.hikari.HikariConfig - registerMbeans..................false
+2025-06-06 13:33:43 DEBUG com.zaxxer.hikari.HikariConfig - scheduledExecutor...............none
+2025-06-06 13:33:43 DEBUG com.zaxxer.hikari.HikariConfig - schema..........................none
+2025-06-06 13:33:43 DEBUG com.zaxxer.hikari.HikariConfig - threadFactory...................internal
+2025-06-06 13:33:43 DEBUG com.zaxxer.hikari.HikariConfig - transactionIsolation............default
+2025-06-06 13:33:43 DEBUG com.zaxxer.hikari.HikariConfig - username........................"kleidimos"
+2025-06-06 13:33:43 DEBUG com.zaxxer.hikari.HikariConfig - validationTimeout...............5000
+2025-06-06 13:33:43 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-06-06 13:33:43 DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to create/setup connection: Public Key Retrieval is not allowed
+2025-06-06 13:33:43 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Cannot acquire connection from data source
+java.sql.SQLNonTransientConnectionException: Public Key Retrieval is not allowed
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:102)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:114)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:837)
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:420)
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:238)
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:180)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:137)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:360)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:202)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:461)
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:550)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:98)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:111)
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:126)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:483)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.DdlTransactionIsolatorNonJtaImpl.getIsolatedConnection(DdlTransactionIsolatorNonJtaImpl.java:46)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.DdlTransactionIsolatorNonJtaImpl.getIsolatedConnection(DdlTransactionIsolatorNonJtaImpl.java:39)
+	at org.hibernate.tool.schema.internal.exec.ImprovedExtractionContextImpl.getJdbcConnection(ImprovedExtractionContextImpl.java:63)
+	at org.hibernate.tool.schema.internal.exec.ImprovedExtractionContextImpl.getJdbcDatabaseMetaData(ImprovedExtractionContextImpl.java:70)
+	at org.hibernate.tool.schema.extract.internal.InformationExtractorJdbcDatabaseMetaDataImpl.processTableResultSet(InformationExtractorJdbcDatabaseMetaDataImpl.java:65)
+	at org.hibernate.tool.schema.extract.internal.AbstractInformationExtractorImpl.getTables(AbstractInformationExtractorImpl.java:570)
+	at org.hibernate.tool.schema.extract.internal.DatabaseInformationImpl.getTablesInformation(DatabaseInformationImpl.java:122)
+	at org.hibernate.tool.schema.internal.GroupedSchemaMigratorImpl.performTablesMigration(GroupedSchemaMigratorImpl.java:72)
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.performMigration(AbstractSchemaMigrator.java:233)
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.doMigration(AbstractSchemaMigrator.java:112)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:280)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.lambda$process$5(SchemaManagementToolCoordinator.java:144)
+	at java.base/java.util.HashMap.forEach(HashMap.java:1421)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:141)
+	at org.hibernate.boot.internal.SessionFactoryObserverForSchemaExport.sessionFactoryCreated(SessionFactoryObserverForSchemaExport.java:37)
+	at org.hibernate.internal.SessionFactoryObserverChain.sessionFactoryCreated(SessionFactoryObserverChain.java:35)
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:324)
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:463)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1517)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:66)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:390)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:419)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:400)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:366)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1873)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1822)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:607)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:373)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:207)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:970)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:627)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:753)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1362)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1351)
+	at gr.aueb.cf.teacherapp.TeachersApplication.main(TeachersApplication.java:12)
+Caused by: com.mysql.cj.exceptions.UnableToConnectException: Public Key Retrieval is not allowed
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:52)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:76)
+	at com.mysql.cj.protocol.a.authentication.CachingSha2PasswordPlugin.nextAuthenticationStep(CachingSha2PasswordPlugin.java:122)
+	at com.mysql.cj.protocol.a.authentication.CachingSha2PasswordPlugin.nextAuthenticationStep(CachingSha2PasswordPlugin.java:40)
+	at com.mysql.cj.protocol.a.NativeAuthenticationProvider.proceedHandshakeWithPluggableAuthentication(NativeAuthenticationProvider.java:436)
+	at com.mysql.cj.protocol.a.NativeAuthenticationProvider.connect(NativeAuthenticationProvider.java:206)
+	at com.mysql.cj.protocol.a.NativeProtocol.connect(NativeProtocol.java:1333)
+	at com.mysql.cj.NativeSession.connect(NativeSession.java:155)
+	at com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:961)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:825)
+	... 53 common frames omitted
+2025-06-06 13:43:21 DEBUG com.zaxxer.hikari.HikariConfig - Driver class com.mysql.cj.jdbc.Driver found in Thread context class loader jdk.internal.loader.ClassLoaders$AppClassLoader@30946e09
+2025-06-06 13:43:22 DEBUG com.zaxxer.hikari.HikariConfig - HikariPool-1 - configuration:
+2025-06-06 13:43:22 DEBUG com.zaxxer.hikari.HikariConfig - allowPoolSuspension.............false
+2025-06-06 13:43:22 DEBUG com.zaxxer.hikari.HikariConfig - autoCommit......................true
+2025-06-06 13:43:22 DEBUG com.zaxxer.hikari.HikariConfig - catalog.........................none
+2025-06-06 13:43:22 DEBUG com.zaxxer.hikari.HikariConfig - connectionInitSql...............none
+2025-06-06 13:43:22 DEBUG com.zaxxer.hikari.HikariConfig - connectionTestQuery.............none
+2025-06-06 13:43:22 DEBUG com.zaxxer.hikari.HikariConfig - connectionTimeout...............30000
+2025-06-06 13:43:22 DEBUG com.zaxxer.hikari.HikariConfig - dataSource......................none
+2025-06-06 13:43:22 DEBUG com.zaxxer.hikari.HikariConfig - dataSourceClassName.............none
+2025-06-06 13:43:22 DEBUG com.zaxxer.hikari.HikariConfig - dataSourceJNDI..................none
+2025-06-06 13:43:22 DEBUG com.zaxxer.hikari.HikariConfig - dataSourceProperties............{password=<masked>}
+2025-06-06 13:43:22 DEBUG com.zaxxer.hikari.HikariConfig - driverClassName................."com.mysql.cj.jdbc.Driver"
+2025-06-06 13:43:22 DEBUG com.zaxxer.hikari.HikariConfig - exceptionOverrideClassName......none
+2025-06-06 13:43:22 DEBUG com.zaxxer.hikari.HikariConfig - healthCheckProperties...........{}
+2025-06-06 13:43:22 DEBUG com.zaxxer.hikari.HikariConfig - healthCheckRegistry.............none
+2025-06-06 13:43:22 DEBUG com.zaxxer.hikari.HikariConfig - idleTimeout.....................600000
+2025-06-06 13:43:22 DEBUG com.zaxxer.hikari.HikariConfig - initializationFailTimeout.......1
+2025-06-06 13:43:22 DEBUG com.zaxxer.hikari.HikariConfig - isolateInternalQueries..........false
+2025-06-06 13:43:22 DEBUG com.zaxxer.hikari.HikariConfig - jdbcUrl.........................jdbc:mysql://localhost:3306/springteacher7db?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=Europe/Athens&allowPublicKeyRetrieval=true
+2025-06-06 13:43:22 DEBUG com.zaxxer.hikari.HikariConfig - keepaliveTime...................0
+2025-06-06 13:43:22 DEBUG com.zaxxer.hikari.HikariConfig - leakDetectionThreshold..........0
+2025-06-06 13:43:22 DEBUG com.zaxxer.hikari.HikariConfig - maxLifetime.....................1800000
+2025-06-06 13:43:22 DEBUG com.zaxxer.hikari.HikariConfig - maximumPoolSize.................10
+2025-06-06 13:43:22 DEBUG com.zaxxer.hikari.HikariConfig - metricRegistry..................none
+2025-06-06 13:43:22 DEBUG com.zaxxer.hikari.HikariConfig - metricsTrackerFactory...........none
+2025-06-06 13:43:22 DEBUG com.zaxxer.hikari.HikariConfig - minimumIdle.....................10
+2025-06-06 13:43:22 DEBUG com.zaxxer.hikari.HikariConfig - password........................<masked>
+2025-06-06 13:43:22 DEBUG com.zaxxer.hikari.HikariConfig - poolName........................"HikariPool-1"
+2025-06-06 13:43:22 DEBUG com.zaxxer.hikari.HikariConfig - readOnly........................false
+2025-06-06 13:43:22 DEBUG com.zaxxer.hikari.HikariConfig - registerMbeans..................false
+2025-06-06 13:43:22 DEBUG com.zaxxer.hikari.HikariConfig - scheduledExecutor...............none
+2025-06-06 13:43:22 DEBUG com.zaxxer.hikari.HikariConfig - schema..........................none
+2025-06-06 13:43:22 DEBUG com.zaxxer.hikari.HikariConfig - threadFactory...................internal
+2025-06-06 13:43:22 DEBUG com.zaxxer.hikari.HikariConfig - transactionIsolation............default
+2025-06-06 13:43:22 DEBUG com.zaxxer.hikari.HikariConfig - username........................"kleidimos"
+2025-06-06 13:43:22 DEBUG com.zaxxer.hikari.HikariConfig - validationTimeout...............5000
+2025-06-06 13:43:22 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-06-06 13:43:22 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3982206a
+2025-06-06 13:43:22 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-06-06 13:43:22 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=1, active=0, idle=1, waiting=0)
+2025-06-06 13:43:22 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1c155a1b
+2025-06-06 13:43:22 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - After adding stats (total=2, active=0, idle=2, waiting=0)
+2025-06-06 13:43:22 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5d285020
+2025-06-06 13:43:22 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - After adding stats (total=3, active=0, idle=3, waiting=0)
+2025-06-06 13:43:22 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6cbfca4a
+2025-06-06 13:43:22 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - After adding stats (total=4, active=0, idle=4, waiting=0)
+2025-06-06 13:43:22 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3d07af6f
+2025-06-06 13:43:22 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - After adding stats (total=5, active=0, idle=5, waiting=0)
+2025-06-06 13:43:22 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@113ef1bb
+2025-06-06 13:43:22 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - After adding stats (total=6, active=0, idle=6, waiting=0)
+2025-06-06 13:43:22 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3949f6d1
+2025-06-06 13:43:22 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - After adding stats (total=7, active=0, idle=7, waiting=0)
+2025-06-06 13:43:22 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@50e28231
+2025-06-06 13:43:22 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - After adding stats (total=8, active=0, idle=8, waiting=0)
+2025-06-06 13:43:22 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@359f548d
+2025-06-06 13:43:22 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - After adding stats (total=9, active=0, idle=9, waiting=0)
+2025-06-06 13:43:22 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7fe2ce3c
+2025-06-06 13:43:22 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - After adding stats (total=10, active=0, idle=10, waiting=0)
+2025-06-06 13:43:24 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-06-06 13:43:24 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Before shutdown stats (total=10, active=0, idle=10, waiting=0)
+2025-06-06 13:43:24 DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@3982206a: (connection evicted)
+2025-06-06 13:43:24 DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@1c155a1b: (connection evicted)
+2025-06-06 13:43:24 DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@5d285020: (connection evicted)
+2025-06-06 13:43:24 DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@6cbfca4a: (connection evicted)
+2025-06-06 13:43:24 DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@3d07af6f: (connection evicted)
+2025-06-06 13:43:24 DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@113ef1bb: (connection evicted)
+2025-06-06 13:43:24 DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@3949f6d1: (connection evicted)
+2025-06-06 13:43:24 DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@50e28231: (connection evicted)
+2025-06-06 13:43:24 DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@359f548d: (connection evicted)
+2025-06-06 13:43:24 DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@7fe2ce3c: (connection evicted)
+2025-06-06 13:43:24 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - After shutdown stats (total=0, active=0, idle=0, waiting=0)
+2025-06-06 13:43:24 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-06-06 13:46:35 DEBUG com.zaxxer.hikari.HikariConfig - Driver class com.mysql.cj.jdbc.Driver found in Thread context class loader jdk.internal.loader.ClassLoaders$AppClassLoader@30946e09
+2025-06-06 13:46:36 DEBUG com.zaxxer.hikari.HikariConfig - HikariPool-1 - configuration:
+2025-06-06 13:46:36 DEBUG com.zaxxer.hikari.HikariConfig - allowPoolSuspension.............false
+2025-06-06 13:46:36 DEBUG com.zaxxer.hikari.HikariConfig - autoCommit......................true
+2025-06-06 13:46:36 DEBUG com.zaxxer.hikari.HikariConfig - catalog.........................none
+2025-06-06 13:46:36 DEBUG com.zaxxer.hikari.HikariConfig - connectionInitSql...............none
+2025-06-06 13:46:36 DEBUG com.zaxxer.hikari.HikariConfig - connectionTestQuery.............none
+2025-06-06 13:46:36 DEBUG com.zaxxer.hikari.HikariConfig - connectionTimeout...............30000
+2025-06-06 13:46:36 DEBUG com.zaxxer.hikari.HikariConfig - dataSource......................none
+2025-06-06 13:46:36 DEBUG com.zaxxer.hikari.HikariConfig - dataSourceClassName.............none
+2025-06-06 13:46:36 DEBUG com.zaxxer.hikari.HikariConfig - dataSourceJNDI..................none
+2025-06-06 13:46:36 DEBUG com.zaxxer.hikari.HikariConfig - dataSourceProperties............{password=<masked>}
+2025-06-06 13:46:36 DEBUG com.zaxxer.hikari.HikariConfig - driverClassName................."com.mysql.cj.jdbc.Driver"
+2025-06-06 13:46:36 DEBUG com.zaxxer.hikari.HikariConfig - exceptionOverrideClassName......none
+2025-06-06 13:46:36 DEBUG com.zaxxer.hikari.HikariConfig - healthCheckProperties...........{}
+2025-06-06 13:46:36 DEBUG com.zaxxer.hikari.HikariConfig - healthCheckRegistry.............none
+2025-06-06 13:46:36 DEBUG com.zaxxer.hikari.HikariConfig - idleTimeout.....................600000
+2025-06-06 13:46:36 DEBUG com.zaxxer.hikari.HikariConfig - initializationFailTimeout.......1
+2025-06-06 13:46:36 DEBUG com.zaxxer.hikari.HikariConfig - isolateInternalQueries..........false
+2025-06-06 13:46:36 DEBUG com.zaxxer.hikari.HikariConfig - jdbcUrl.........................jdbc:mysql://localhost:3306/springteacher7db?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=Europe/Athens&allowPublicKeyRetrieval=true
+2025-06-06 13:46:36 DEBUG com.zaxxer.hikari.HikariConfig - keepaliveTime...................0
+2025-06-06 13:46:36 DEBUG com.zaxxer.hikari.HikariConfig - leakDetectionThreshold..........0
+2025-06-06 13:46:36 DEBUG com.zaxxer.hikari.HikariConfig - maxLifetime.....................1800000
+2025-06-06 13:46:36 DEBUG com.zaxxer.hikari.HikariConfig - maximumPoolSize.................10
+2025-06-06 13:46:36 DEBUG com.zaxxer.hikari.HikariConfig - metricRegistry..................none
+2025-06-06 13:46:36 DEBUG com.zaxxer.hikari.HikariConfig - metricsTrackerFactory...........none
+2025-06-06 13:46:36 DEBUG com.zaxxer.hikari.HikariConfig - minimumIdle.....................10
+2025-06-06 13:46:36 DEBUG com.zaxxer.hikari.HikariConfig - password........................<masked>
+2025-06-06 13:46:36 DEBUG com.zaxxer.hikari.HikariConfig - poolName........................"HikariPool-1"
+2025-06-06 13:46:36 DEBUG com.zaxxer.hikari.HikariConfig - readOnly........................false
+2025-06-06 13:46:36 DEBUG com.zaxxer.hikari.HikariConfig - registerMbeans..................false
+2025-06-06 13:46:36 DEBUG com.zaxxer.hikari.HikariConfig - scheduledExecutor...............none
+2025-06-06 13:46:36 DEBUG com.zaxxer.hikari.HikariConfig - schema..........................none
+2025-06-06 13:46:36 DEBUG com.zaxxer.hikari.HikariConfig - threadFactory...................internal
+2025-06-06 13:46:36 DEBUG com.zaxxer.hikari.HikariConfig - transactionIsolation............default
+2025-06-06 13:46:36 DEBUG com.zaxxer.hikari.HikariConfig - username........................"kleidimos"
+2025-06-06 13:46:36 DEBUG com.zaxxer.hikari.HikariConfig - validationTimeout...............5000
+2025-06-06 13:46:36 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-06-06 13:46:36 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3d53e876
+2025-06-06 13:46:36 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-06-06 13:46:36 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=1, active=0, idle=1, waiting=0)
+2025-06-06 13:46:36 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2445299b
+2025-06-06 13:46:36 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - After adding stats (total=2, active=0, idle=2, waiting=0)
+2025-06-06 13:46:36 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@657823a0
+2025-06-06 13:46:36 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - After adding stats (total=3, active=0, idle=3, waiting=0)
+2025-06-06 13:46:36 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@54d7c1fe
+2025-06-06 13:46:36 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - After adding stats (total=4, active=0, idle=4, waiting=0)
+2025-06-06 13:46:36 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@557dcef
+2025-06-06 13:46:36 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - After adding stats (total=5, active=0, idle=5, waiting=0)
+2025-06-06 13:46:36 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2f63a94c
+2025-06-06 13:46:36 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - After adding stats (total=6, active=0, idle=6, waiting=0)
+2025-06-06 13:46:36 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@119a509
+2025-06-06 13:46:36 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - After adding stats (total=7, active=0, idle=7, waiting=0)
+2025-06-06 13:46:36 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7c5d4c5e
+2025-06-06 13:46:36 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - After adding stats (total=8, active=0, idle=8, waiting=0)
+2025-06-06 13:46:36 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1f2d91ed
+2025-06-06 13:46:36 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - After adding stats (total=9, active=0, idle=9, waiting=0)
+2025-06-06 13:46:36 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@72914ec3
+2025-06-06 13:46:36 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - After adding stats (total=10, active=0, idle=10, waiting=0)
+2025-06-06 13:46:37 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-06-06 13:46:37 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Before shutdown stats (total=10, active=0, idle=10, waiting=0)
+2025-06-06 13:46:37 DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@3d53e876: (connection evicted)
+2025-06-06 13:46:37 DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@2445299b: (connection evicted)
+2025-06-06 13:46:37 DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@657823a0: (connection evicted)
+2025-06-06 13:46:37 DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@54d7c1fe: (connection evicted)
+2025-06-06 13:46:37 DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@557dcef: (connection evicted)
+2025-06-06 13:46:37 DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@2f63a94c: (connection evicted)
+2025-06-06 13:46:37 DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@119a509: (connection evicted)
+2025-06-06 13:46:37 DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@7c5d4c5e: (connection evicted)
+2025-06-06 13:46:37 DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@1f2d91ed: (connection evicted)
+2025-06-06 13:46:37 DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@72914ec3: (connection evicted)
+2025-06-06 13:46:37 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - After shutdown stats (total=0, active=0, idle=0, waiting=0)
+2025-06-06 13:46:37 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-06-06 13:58:59 DEBUG com.zaxxer.hikari.HikariConfig - Driver class com.mysql.cj.jdbc.Driver found in Thread context class loader jdk.internal.loader.ClassLoaders$AppClassLoader@30946e09
+2025-06-06 13:58:59 DEBUG com.zaxxer.hikari.HikariConfig - HikariPool-1 - configuration:
+2025-06-06 13:58:59 DEBUG com.zaxxer.hikari.HikariConfig - allowPoolSuspension.............false
+2025-06-06 13:58:59 DEBUG com.zaxxer.hikari.HikariConfig - autoCommit......................true
+2025-06-06 13:58:59 DEBUG com.zaxxer.hikari.HikariConfig - catalog.........................none
+2025-06-06 13:58:59 DEBUG com.zaxxer.hikari.HikariConfig - connectionInitSql...............none
+2025-06-06 13:58:59 DEBUG com.zaxxer.hikari.HikariConfig - connectionTestQuery.............none
+2025-06-06 13:58:59 DEBUG com.zaxxer.hikari.HikariConfig - connectionTimeout...............30000
+2025-06-06 13:58:59 DEBUG com.zaxxer.hikari.HikariConfig - dataSource......................none
+2025-06-06 13:58:59 DEBUG com.zaxxer.hikari.HikariConfig - dataSourceClassName.............none
+2025-06-06 13:58:59 DEBUG com.zaxxer.hikari.HikariConfig - dataSourceJNDI..................none
+2025-06-06 13:58:59 DEBUG com.zaxxer.hikari.HikariConfig - dataSourceProperties............{password=<masked>}
+2025-06-06 13:58:59 DEBUG com.zaxxer.hikari.HikariConfig - driverClassName................."com.mysql.cj.jdbc.Driver"
+2025-06-06 13:58:59 DEBUG com.zaxxer.hikari.HikariConfig - exceptionOverrideClassName......none
+2025-06-06 13:58:59 DEBUG com.zaxxer.hikari.HikariConfig - healthCheckProperties...........{}
+2025-06-06 13:58:59 DEBUG com.zaxxer.hikari.HikariConfig - healthCheckRegistry.............none
+2025-06-06 13:58:59 DEBUG com.zaxxer.hikari.HikariConfig - idleTimeout.....................600000
+2025-06-06 13:58:59 DEBUG com.zaxxer.hikari.HikariConfig - initializationFailTimeout.......1
+2025-06-06 13:58:59 DEBUG com.zaxxer.hikari.HikariConfig - isolateInternalQueries..........false
+2025-06-06 13:58:59 DEBUG com.zaxxer.hikari.HikariConfig - jdbcUrl.........................jdbc:mysql://localhost:3306/springteacher7db?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=Europe/Athens&allowPublicKeyRetrieval=true
+2025-06-06 13:58:59 DEBUG com.zaxxer.hikari.HikariConfig - keepaliveTime...................0
+2025-06-06 13:58:59 DEBUG com.zaxxer.hikari.HikariConfig - leakDetectionThreshold..........0
+2025-06-06 13:58:59 DEBUG com.zaxxer.hikari.HikariConfig - maxLifetime.....................1800000
+2025-06-06 13:58:59 DEBUG com.zaxxer.hikari.HikariConfig - maximumPoolSize.................10
+2025-06-06 13:58:59 DEBUG com.zaxxer.hikari.HikariConfig - metricRegistry..................none
+2025-06-06 13:58:59 DEBUG com.zaxxer.hikari.HikariConfig - metricsTrackerFactory...........none
+2025-06-06 13:58:59 DEBUG com.zaxxer.hikari.HikariConfig - minimumIdle.....................10
+2025-06-06 13:58:59 DEBUG com.zaxxer.hikari.HikariConfig - password........................<masked>
+2025-06-06 13:58:59 DEBUG com.zaxxer.hikari.HikariConfig - poolName........................"HikariPool-1"
+2025-06-06 13:58:59 DEBUG com.zaxxer.hikari.HikariConfig - readOnly........................false
+2025-06-06 13:58:59 DEBUG com.zaxxer.hikari.HikariConfig - registerMbeans..................false
+2025-06-06 13:58:59 DEBUG com.zaxxer.hikari.HikariConfig - scheduledExecutor...............none
+2025-06-06 13:58:59 DEBUG com.zaxxer.hikari.HikariConfig - schema..........................none
+2025-06-06 13:58:59 DEBUG com.zaxxer.hikari.HikariConfig - threadFactory...................internal
+2025-06-06 13:58:59 DEBUG com.zaxxer.hikari.HikariConfig - transactionIsolation............default
+2025-06-06 13:58:59 DEBUG com.zaxxer.hikari.HikariConfig - username........................"kleidimos"
+2025-06-06 13:58:59 DEBUG com.zaxxer.hikari.HikariConfig - validationTimeout...............5000
+2025-06-06 13:58:59 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-06-06 13:58:59 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3a54638b
+2025-06-06 13:58:59 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-06-06 13:59:00 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=1, active=0, idle=1, waiting=0)
+2025-06-06 13:59:00 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@94f0a
+2025-06-06 13:59:00 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - After adding stats (total=2, active=0, idle=2, waiting=0)
+2025-06-06 13:59:00 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@41344531
+2025-06-06 13:59:00 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - After adding stats (total=3, active=0, idle=3, waiting=0)
+2025-06-06 13:59:00 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@703f4759
+2025-06-06 13:59:00 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - After adding stats (total=4, active=0, idle=4, waiting=0)
+2025-06-06 13:59:00 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@211bba7e
+2025-06-06 13:59:00 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - After adding stats (total=5, active=0, idle=5, waiting=0)
+2025-06-06 13:59:00 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@307b8997
+2025-06-06 13:59:00 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - After adding stats (total=6, active=0, idle=6, waiting=0)
+2025-06-06 13:59:00 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@255567dc
+2025-06-06 13:59:00 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - After adding stats (total=7, active=0, idle=7, waiting=0)
+2025-06-06 13:59:00 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@53405a50
+2025-06-06 13:59:00 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - After adding stats (total=8, active=0, idle=8, waiting=0)
+2025-06-06 13:59:00 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@b646549
+2025-06-06 13:59:00 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - After adding stats (total=9, active=0, idle=9, waiting=0)
+2025-06-06 13:59:00 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3f018111
+2025-06-06 13:59:00 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - After adding stats (total=10, active=0, idle=10, waiting=0)
+2025-06-06 13:59:30 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2025-06-06 13:59:30 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2025-06-06 14:00:00 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2025-06-06 14:00:00 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2025-06-06 14:00:30 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2025-06-06 14:00:30 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2025-06-06 14:01:00 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2025-06-06 14:01:00 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2025-06-06 14:01:30 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2025-06-06 14:01:30 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2025-06-06 14:02:00 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2025-06-06 14:02:00 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2025-06-06 14:02:30 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2025-06-06 14:02:30 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2025-06-06 14:03:00 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2025-06-06 14:03:00 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2025-06-06 14:03:06 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-06-06 14:03:06 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Before shutdown stats (total=10, active=0, idle=10, waiting=0)
+2025-06-06 14:03:06 DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@3a54638b: (connection evicted)
+2025-06-06 14:03:06 DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@94f0a: (connection evicted)
+2025-06-06 14:03:06 DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@41344531: (connection evicted)
+2025-06-06 14:03:06 DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@703f4759: (connection evicted)
+2025-06-06 14:03:06 DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@211bba7e: (connection evicted)
+2025-06-06 14:03:06 DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@307b8997: (connection evicted)
+2025-06-06 14:03:06 DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@255567dc: (connection evicted)
+2025-06-06 14:03:06 DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@53405a50: (connection evicted)
+2025-06-06 14:03:06 DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@b646549: (connection evicted)
+2025-06-06 14:03:06 DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@3f018111: (connection evicted)
+2025-06-06 14:03:06 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - After shutdown stats (total=0, active=0, idle=0, waiting=0)
+2025-06-06 14:03:06 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-06-06 14:23:21 DEBUG com.zaxxer.hikari.HikariConfig - Driver class com.mysql.cj.jdbc.Driver found in Thread context class loader jdk.internal.loader.ClassLoaders$AppClassLoader@30946e09
+2025-06-06 14:23:21 DEBUG com.zaxxer.hikari.HikariConfig - HikariPool-1 - configuration:
+2025-06-06 14:23:21 DEBUG com.zaxxer.hikari.HikariConfig - allowPoolSuspension.............false
+2025-06-06 14:23:21 DEBUG com.zaxxer.hikari.HikariConfig - autoCommit......................true
+2025-06-06 14:23:21 DEBUG com.zaxxer.hikari.HikariConfig - catalog.........................none
+2025-06-06 14:23:21 DEBUG com.zaxxer.hikari.HikariConfig - connectionInitSql...............none
+2025-06-06 14:23:21 DEBUG com.zaxxer.hikari.HikariConfig - connectionTestQuery.............none
+2025-06-06 14:23:21 DEBUG com.zaxxer.hikari.HikariConfig - connectionTimeout...............30000
+2025-06-06 14:23:21 DEBUG com.zaxxer.hikari.HikariConfig - dataSource......................none
+2025-06-06 14:23:21 DEBUG com.zaxxer.hikari.HikariConfig - dataSourceClassName.............none
+2025-06-06 14:23:21 DEBUG com.zaxxer.hikari.HikariConfig - dataSourceJNDI..................none
+2025-06-06 14:23:21 DEBUG com.zaxxer.hikari.HikariConfig - dataSourceProperties............{password=<masked>}
+2025-06-06 14:23:21 DEBUG com.zaxxer.hikari.HikariConfig - driverClassName................."com.mysql.cj.jdbc.Driver"
+2025-06-06 14:23:21 DEBUG com.zaxxer.hikari.HikariConfig - exceptionOverrideClassName......none
+2025-06-06 14:23:21 DEBUG com.zaxxer.hikari.HikariConfig - healthCheckProperties...........{}
+2025-06-06 14:23:21 DEBUG com.zaxxer.hikari.HikariConfig - healthCheckRegistry.............none
+2025-06-06 14:23:21 DEBUG com.zaxxer.hikari.HikariConfig - idleTimeout.....................600000
+2025-06-06 14:23:21 DEBUG com.zaxxer.hikari.HikariConfig - initializationFailTimeout.......1
+2025-06-06 14:23:21 DEBUG com.zaxxer.hikari.HikariConfig - isolateInternalQueries..........false
+2025-06-06 14:23:21 DEBUG com.zaxxer.hikari.HikariConfig - jdbcUrl.........................jdbc:mysql://localhost:3306/springteacher7db?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=Europe/Athens&allowPublicKeyRetrieval=true
+2025-06-06 14:23:21 DEBUG com.zaxxer.hikari.HikariConfig - keepaliveTime...................0
+2025-06-06 14:23:21 DEBUG com.zaxxer.hikari.HikariConfig - leakDetectionThreshold..........0
+2025-06-06 14:23:21 DEBUG com.zaxxer.hikari.HikariConfig - maxLifetime.....................1800000
+2025-06-06 14:23:21 DEBUG com.zaxxer.hikari.HikariConfig - maximumPoolSize.................10
+2025-06-06 14:23:21 DEBUG com.zaxxer.hikari.HikariConfig - metricRegistry..................none
+2025-06-06 14:23:21 DEBUG com.zaxxer.hikari.HikariConfig - metricsTrackerFactory...........none
+2025-06-06 14:23:21 DEBUG com.zaxxer.hikari.HikariConfig - minimumIdle.....................10
+2025-06-06 14:23:21 DEBUG com.zaxxer.hikari.HikariConfig - password........................<masked>
+2025-06-06 14:23:21 DEBUG com.zaxxer.hikari.HikariConfig - poolName........................"HikariPool-1"
+2025-06-06 14:23:21 DEBUG com.zaxxer.hikari.HikariConfig - readOnly........................false
+2025-06-06 14:23:21 DEBUG com.zaxxer.hikari.HikariConfig - registerMbeans..................false
+2025-06-06 14:23:21 DEBUG com.zaxxer.hikari.HikariConfig - scheduledExecutor...............none
+2025-06-06 14:23:21 DEBUG com.zaxxer.hikari.HikariConfig - schema..........................none
+2025-06-06 14:23:21 DEBUG com.zaxxer.hikari.HikariConfig - threadFactory...................internal
+2025-06-06 14:23:21 DEBUG com.zaxxer.hikari.HikariConfig - transactionIsolation............default
+2025-06-06 14:23:21 DEBUG com.zaxxer.hikari.HikariConfig - username........................"kleidimos"
+2025-06-06 14:23:21 DEBUG com.zaxxer.hikari.HikariConfig - validationTimeout...............5000
+2025-06-06 14:23:21 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-06-06 14:23:21 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@17c4dc5b
+2025-06-06 14:23:21 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-06-06 14:23:21 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=1, active=0, idle=1, waiting=0)
+2025-06-06 14:23:21 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3c23677b
+2025-06-06 14:23:21 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - After adding stats (total=2, active=0, idle=2, waiting=0)
+2025-06-06 14:23:21 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7d1e6d40
+2025-06-06 14:23:21 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - After adding stats (total=3, active=0, idle=3, waiting=0)
+2025-06-06 14:23:21 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4ca9f135
+2025-06-06 14:23:21 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - After adding stats (total=4, active=0, idle=4, waiting=0)
+2025-06-06 14:23:21 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1d31920f
+2025-06-06 14:23:21 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - After adding stats (total=5, active=0, idle=5, waiting=0)
+2025-06-06 14:23:21 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@47017901
+2025-06-06 14:23:21 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - After adding stats (total=6, active=0, idle=6, waiting=0)
+2025-06-06 14:23:21 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@197feb97
+2025-06-06 14:23:21 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - After adding stats (total=7, active=0, idle=7, waiting=0)
+2025-06-06 14:23:21 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1cb7cc8
+2025-06-06 14:23:21 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - After adding stats (total=8, active=0, idle=8, waiting=0)
+2025-06-06 14:23:21 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@12bf3fa8
+2025-06-06 14:23:21 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - After adding stats (total=9, active=0, idle=9, waiting=0)
+2025-06-06 14:23:21 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7355ca7b
+2025-06-06 14:23:21 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - After adding stats (total=10, active=0, idle=10, waiting=0)
+2025-06-06 14:23:51 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2025-06-06 14:23:51 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2025-06-06 14:24:21 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2025-06-06 14:24:21 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2025-06-06 14:24:39 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-06-06 14:24:39 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Before shutdown stats (total=10, active=0, idle=10, waiting=0)
+2025-06-06 14:24:39 DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@17c4dc5b: (connection evicted)
+2025-06-06 14:24:39 DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@3c23677b: (connection evicted)
+2025-06-06 14:24:39 DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@7d1e6d40: (connection evicted)
+2025-06-06 14:24:39 DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@4ca9f135: (connection evicted)
+2025-06-06 14:24:39 DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@1d31920f: (connection evicted)
+2025-06-06 14:24:39 DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@47017901: (connection evicted)
+2025-06-06 14:24:39 DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@197feb97: (connection evicted)
+2025-06-06 14:24:39 DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@1cb7cc8: (connection evicted)
+2025-06-06 14:24:39 DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@12bf3fa8: (connection evicted)
+2025-06-06 14:24:39 DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@7355ca7b: (connection evicted)
+2025-06-06 14:24:39 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - After shutdown stats (total=0, active=0, idle=0, waiting=0)
+2025-06-06 14:24:39 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-06-06 14:25:31 DEBUG com.zaxxer.hikari.HikariConfig - Driver class com.mysql.cj.jdbc.Driver found in Thread context class loader jdk.internal.loader.ClassLoaders$AppClassLoader@30946e09
+2025-06-06 14:25:32 DEBUG com.zaxxer.hikari.HikariConfig - HikariPool-1 - configuration:
+2025-06-06 14:25:32 DEBUG com.zaxxer.hikari.HikariConfig - allowPoolSuspension.............false
+2025-06-06 14:25:32 DEBUG com.zaxxer.hikari.HikariConfig - autoCommit......................true
+2025-06-06 14:25:32 DEBUG com.zaxxer.hikari.HikariConfig - catalog.........................none
+2025-06-06 14:25:32 DEBUG com.zaxxer.hikari.HikariConfig - connectionInitSql...............none
+2025-06-06 14:25:32 DEBUG com.zaxxer.hikari.HikariConfig - connectionTestQuery.............none
+2025-06-06 14:25:32 DEBUG com.zaxxer.hikari.HikariConfig - connectionTimeout...............30000
+2025-06-06 14:25:32 DEBUG com.zaxxer.hikari.HikariConfig - dataSource......................none
+2025-06-06 14:25:32 DEBUG com.zaxxer.hikari.HikariConfig - dataSourceClassName.............none
+2025-06-06 14:25:32 DEBUG com.zaxxer.hikari.HikariConfig - dataSourceJNDI..................none
+2025-06-06 14:25:32 DEBUG com.zaxxer.hikari.HikariConfig - dataSourceProperties............{password=<masked>}
+2025-06-06 14:25:32 DEBUG com.zaxxer.hikari.HikariConfig - driverClassName................."com.mysql.cj.jdbc.Driver"
+2025-06-06 14:25:32 DEBUG com.zaxxer.hikari.HikariConfig - exceptionOverrideClassName......none
+2025-06-06 14:25:32 DEBUG com.zaxxer.hikari.HikariConfig - healthCheckProperties...........{}
+2025-06-06 14:25:32 DEBUG com.zaxxer.hikari.HikariConfig - healthCheckRegistry.............none
+2025-06-06 14:25:32 DEBUG com.zaxxer.hikari.HikariConfig - idleTimeout.....................600000
+2025-06-06 14:25:32 DEBUG com.zaxxer.hikari.HikariConfig - initializationFailTimeout.......1
+2025-06-06 14:25:32 DEBUG com.zaxxer.hikari.HikariConfig - isolateInternalQueries..........false
+2025-06-06 14:25:32 DEBUG com.zaxxer.hikari.HikariConfig - jdbcUrl.........................jdbc:mysql://localhost:3306/springteacher7db?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=Europe/Athens&allowPublicKeyRetrieval=true
+2025-06-06 14:25:32 DEBUG com.zaxxer.hikari.HikariConfig - keepaliveTime...................0
+2025-06-06 14:25:32 DEBUG com.zaxxer.hikari.HikariConfig - leakDetectionThreshold..........0
+2025-06-06 14:25:32 DEBUG com.zaxxer.hikari.HikariConfig - maxLifetime.....................1800000
+2025-06-06 14:25:32 DEBUG com.zaxxer.hikari.HikariConfig - maximumPoolSize.................10
+2025-06-06 14:25:32 DEBUG com.zaxxer.hikari.HikariConfig - metricRegistry..................none
+2025-06-06 14:25:32 DEBUG com.zaxxer.hikari.HikariConfig - metricsTrackerFactory...........none
+2025-06-06 14:25:32 DEBUG com.zaxxer.hikari.HikariConfig - minimumIdle.....................10
+2025-06-06 14:25:32 DEBUG com.zaxxer.hikari.HikariConfig - password........................<masked>
+2025-06-06 14:25:32 DEBUG com.zaxxer.hikari.HikariConfig - poolName........................"HikariPool-1"
+2025-06-06 14:25:32 DEBUG com.zaxxer.hikari.HikariConfig - readOnly........................false
+2025-06-06 14:25:32 DEBUG com.zaxxer.hikari.HikariConfig - registerMbeans..................false
+2025-06-06 14:25:32 DEBUG com.zaxxer.hikari.HikariConfig - scheduledExecutor...............none
+2025-06-06 14:25:32 DEBUG com.zaxxer.hikari.HikariConfig - schema..........................none
+2025-06-06 14:25:32 DEBUG com.zaxxer.hikari.HikariConfig - threadFactory...................internal
+2025-06-06 14:25:32 DEBUG com.zaxxer.hikari.HikariConfig - transactionIsolation............default
+2025-06-06 14:25:32 DEBUG com.zaxxer.hikari.HikariConfig - username........................"kleidimos"
+2025-06-06 14:25:32 DEBUG com.zaxxer.hikari.HikariConfig - validationTimeout...............5000
+2025-06-06 14:25:32 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-06-06 14:25:32 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1530d0f2
+2025-06-06 14:25:32 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-06-06 14:25:32 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=1, active=0, idle=1, waiting=0)
+2025-06-06 14:25:32 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@26568f5f
+2025-06-06 14:25:32 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - After adding stats (total=2, active=0, idle=2, waiting=0)
+2025-06-06 14:25:32 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@676b8564
+2025-06-06 14:25:32 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - After adding stats (total=3, active=0, idle=3, waiting=0)
+2025-06-06 14:25:32 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@56c6669f
+2025-06-06 14:25:32 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - After adding stats (total=4, active=0, idle=4, waiting=0)
+2025-06-06 14:25:32 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7447a2b
+2025-06-06 14:25:32 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - After adding stats (total=5, active=0, idle=5, waiting=0)
+2025-06-06 14:25:32 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@670722cd
+2025-06-06 14:25:32 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - After adding stats (total=6, active=0, idle=6, waiting=0)
+2025-06-06 14:25:32 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@30a01ce
+2025-06-06 14:25:32 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - After adding stats (total=7, active=0, idle=7, waiting=0)
+2025-06-06 14:25:32 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5da19075
+2025-06-06 14:25:32 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - After adding stats (total=8, active=0, idle=8, waiting=0)
+2025-06-06 14:25:32 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@74a66282
+2025-06-06 14:25:32 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - After adding stats (total=9, active=0, idle=9, waiting=0)
+2025-06-06 14:25:32 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5092f7db
+2025-06-06 14:25:32 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - After adding stats (total=10, active=0, idle=10, waiting=0)
+2025-06-06 14:26:02 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2025-06-06 14:26:02 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2025-06-06 14:26:32 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2025-06-06 14:26:32 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2025-06-06 14:27:02 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2025-06-06 14:27:02 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2025-06-06 14:27:32 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2025-06-06 14:27:32 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2025-06-06 14:27:38 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-06-06 14:27:38 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Before shutdown stats (total=10, active=0, idle=10, waiting=0)
+2025-06-06 14:27:38 DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@1530d0f2: (connection evicted)
+2025-06-06 14:27:38 DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@26568f5f: (connection evicted)
+2025-06-06 14:27:38 DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@676b8564: (connection evicted)
+2025-06-06 14:27:38 DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@56c6669f: (connection evicted)
+2025-06-06 14:27:38 DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@7447a2b: (connection evicted)
+2025-06-06 14:27:38 DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@670722cd: (connection evicted)
+2025-06-06 14:27:38 DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@30a01ce: (connection evicted)
+2025-06-06 14:27:38 DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@5da19075: (connection evicted)
+2025-06-06 14:27:38 DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@74a66282: (connection evicted)
+2025-06-06 14:27:38 DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@5092f7db: (connection evicted)
+2025-06-06 14:27:38 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - After shutdown stats (total=0, active=0, idle=0, waiting=0)
+2025-06-06 14:27:38 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-06-06 14:31:07 DEBUG com.zaxxer.hikari.HikariConfig - Driver class com.mysql.cj.jdbc.Driver found in Thread context class loader jdk.internal.loader.ClassLoaders$AppClassLoader@30946e09
+2025-06-06 14:31:08 DEBUG com.zaxxer.hikari.HikariConfig - HikariPool-1 - configuration:
+2025-06-06 14:31:08 DEBUG com.zaxxer.hikari.HikariConfig - allowPoolSuspension.............false
+2025-06-06 14:31:08 DEBUG com.zaxxer.hikari.HikariConfig - autoCommit......................true
+2025-06-06 14:31:08 DEBUG com.zaxxer.hikari.HikariConfig - catalog.........................none
+2025-06-06 14:31:08 DEBUG com.zaxxer.hikari.HikariConfig - connectionInitSql...............none
+2025-06-06 14:31:08 DEBUG com.zaxxer.hikari.HikariConfig - connectionTestQuery.............none
+2025-06-06 14:31:08 DEBUG com.zaxxer.hikari.HikariConfig - connectionTimeout...............30000
+2025-06-06 14:31:08 DEBUG com.zaxxer.hikari.HikariConfig - dataSource......................none
+2025-06-06 14:31:08 DEBUG com.zaxxer.hikari.HikariConfig - dataSourceClassName.............none
+2025-06-06 14:31:08 DEBUG com.zaxxer.hikari.HikariConfig - dataSourceJNDI..................none
+2025-06-06 14:31:08 DEBUG com.zaxxer.hikari.HikariConfig - dataSourceProperties............{password=<masked>}
+2025-06-06 14:31:08 DEBUG com.zaxxer.hikari.HikariConfig - driverClassName................."com.mysql.cj.jdbc.Driver"
+2025-06-06 14:31:08 DEBUG com.zaxxer.hikari.HikariConfig - exceptionOverrideClassName......none
+2025-06-06 14:31:08 DEBUG com.zaxxer.hikari.HikariConfig - healthCheckProperties...........{}
+2025-06-06 14:31:08 DEBUG com.zaxxer.hikari.HikariConfig - healthCheckRegistry.............none
+2025-06-06 14:31:08 DEBUG com.zaxxer.hikari.HikariConfig - idleTimeout.....................600000
+2025-06-06 14:31:08 DEBUG com.zaxxer.hikari.HikariConfig - initializationFailTimeout.......1
+2025-06-06 14:31:08 DEBUG com.zaxxer.hikari.HikariConfig - isolateInternalQueries..........false
+2025-06-06 14:31:08 DEBUG com.zaxxer.hikari.HikariConfig - jdbcUrl.........................jdbc:mysql://localhost:3306/springteacher7db?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=Europe/Athens&allowPublicKeyRetrieval=true
+2025-06-06 14:31:08 DEBUG com.zaxxer.hikari.HikariConfig - keepaliveTime...................0
+2025-06-06 14:31:08 DEBUG com.zaxxer.hikari.HikariConfig - leakDetectionThreshold..........0
+2025-06-06 14:31:08 DEBUG com.zaxxer.hikari.HikariConfig - maxLifetime.....................1800000
+2025-06-06 14:31:08 DEBUG com.zaxxer.hikari.HikariConfig - maximumPoolSize.................10
+2025-06-06 14:31:08 DEBUG com.zaxxer.hikari.HikariConfig - metricRegistry..................none
+2025-06-06 14:31:08 DEBUG com.zaxxer.hikari.HikariConfig - metricsTrackerFactory...........none
+2025-06-06 14:31:08 DEBUG com.zaxxer.hikari.HikariConfig - minimumIdle.....................10
+2025-06-06 14:31:08 DEBUG com.zaxxer.hikari.HikariConfig - password........................<masked>
+2025-06-06 14:31:08 DEBUG com.zaxxer.hikari.HikariConfig - poolName........................"HikariPool-1"
+2025-06-06 14:31:08 DEBUG com.zaxxer.hikari.HikariConfig - readOnly........................false
+2025-06-06 14:31:08 DEBUG com.zaxxer.hikari.HikariConfig - registerMbeans..................false
+2025-06-06 14:31:08 DEBUG com.zaxxer.hikari.HikariConfig - scheduledExecutor...............none
+2025-06-06 14:31:08 DEBUG com.zaxxer.hikari.HikariConfig - schema..........................none
+2025-06-06 14:31:08 DEBUG com.zaxxer.hikari.HikariConfig - threadFactory...................internal
+2025-06-06 14:31:08 DEBUG com.zaxxer.hikari.HikariConfig - transactionIsolation............default
+2025-06-06 14:31:08 DEBUG com.zaxxer.hikari.HikariConfig - username........................"kleidimos"
+2025-06-06 14:31:08 DEBUG com.zaxxer.hikari.HikariConfig - validationTimeout...............5000
+2025-06-06 14:31:08 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-06-06 14:31:08 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1530d0f2
+2025-06-06 14:31:08 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-06-06 14:31:08 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=1, active=0, idle=1, waiting=0)
+2025-06-06 14:31:08 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4931a6c5
+2025-06-06 14:31:08 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - After adding stats (total=2, active=0, idle=2, waiting=0)
+2025-06-06 14:31:08 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@80cacfe
+2025-06-06 14:31:08 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - After adding stats (total=3, active=0, idle=3, waiting=0)
+2025-06-06 14:31:08 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@39ce4746
+2025-06-06 14:31:08 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - After adding stats (total=4, active=0, idle=4, waiting=0)
+2025-06-06 14:31:08 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@682353b1
+2025-06-06 14:31:08 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - After adding stats (total=5, active=0, idle=5, waiting=0)
+2025-06-06 14:31:08 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@300f736f
+2025-06-06 14:31:08 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - After adding stats (total=6, active=0, idle=6, waiting=0)
+2025-06-06 14:31:08 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6c6d4f3b
+2025-06-06 14:31:08 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - After adding stats (total=7, active=0, idle=7, waiting=0)
+2025-06-06 14:31:08 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5b07395e
+2025-06-06 14:31:08 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - After adding stats (total=8, active=0, idle=8, waiting=0)
+2025-06-06 14:31:08 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4a6fd499
+2025-06-06 14:31:08 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - After adding stats (total=9, active=0, idle=9, waiting=0)
+2025-06-06 14:31:09 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7dec9f26
+2025-06-06 14:31:09 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - After adding stats (total=10, active=0, idle=10, waiting=0)
+2025-06-06 14:31:38 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2025-06-06 14:31:38 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2025-06-06 14:32:08 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2025-06-06 14:32:08 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2025-06-06 14:32:38 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2025-06-06 14:32:38 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2025-06-06 14:33:08 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2025-06-06 14:33:08 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2025-06-06 14:33:38 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2025-06-06 14:33:38 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2025-06-06 14:34:08 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2025-06-06 14:34:08 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2025-06-06 14:34:38 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2025-06-06 14:34:38 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2025-06-06 14:35:08 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2025-06-06 14:35:08 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2025-06-06 14:35:38 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2025-06-06 14:35:38 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2025-06-06 14:36:08 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2025-06-06 14:36:08 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2025-06-06 14:36:38 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2025-06-06 14:36:38 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2025-06-06 14:37:08 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2025-06-06 14:37:08 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2025-06-06 14:37:38 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2025-06-06 14:37:38 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2025-06-06 14:38:08 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2025-06-06 14:38:08 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2025-06-06 14:38:38 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2025-06-06 14:38:38 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2025-06-06 14:39:08 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2025-06-06 14:39:08 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2025-06-06 14:39:38 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2025-06-06 14:39:38 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2025-06-06 14:40:08 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2025-06-06 14:40:08 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2025-06-06 14:40:38 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2025-06-06 14:40:38 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2025-06-06 14:41:08 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2025-06-06 14:41:08 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2025-06-06 14:41:38 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2025-06-06 14:41:38 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2025-06-06 14:42:08 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2025-06-06 14:42:08 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2025-06-06 14:42:38 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2025-06-06 14:42:38 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2025-06-06 14:43:08 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2025-06-06 14:43:08 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2025-06-06 14:43:38 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2025-06-06 14:43:38 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2025-06-06 14:44:08 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2025-06-06 14:44:08 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2025-06-06 14:44:38 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2025-06-06 14:44:38 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2025-06-06 14:45:08 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2025-06-06 14:45:08 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2025-06-06 14:45:38 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2025-06-06 14:45:38 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2025-06-06 14:46:08 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2025-06-06 14:46:08 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2025-06-06 14:46:18 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-06-06 14:46:18 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Before shutdown stats (total=10, active=0, idle=10, waiting=0)
+2025-06-06 14:46:18 DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@1530d0f2: (connection evicted)
+2025-06-06 14:46:18 DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@4931a6c5: (connection evicted)
+2025-06-06 14:46:18 DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@80cacfe: (connection evicted)
+2025-06-06 14:46:18 DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@39ce4746: (connection evicted)
+2025-06-06 14:46:18 DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@682353b1: (connection evicted)
+2025-06-06 14:46:18 DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@300f736f: (connection evicted)
+2025-06-06 14:46:18 DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@6c6d4f3b: (connection evicted)
+2025-06-06 14:46:18 DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@5b07395e: (connection evicted)
+2025-06-06 14:46:18 DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@4a6fd499: (connection evicted)
+2025-06-06 14:46:18 DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@7dec9f26: (connection evicted)
+2025-06-06 14:46:18 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - After shutdown stats (total=0, active=0, idle=0, waiting=0)
+2025-06-06 14:46:18 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
